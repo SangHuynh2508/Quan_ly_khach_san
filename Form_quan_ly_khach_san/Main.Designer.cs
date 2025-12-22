@@ -1,6 +1,6 @@
 ﻿namespace Form_quan_ly_khach_san
 {
-    partial class Form1
+    partial class Main
     {
         /// <summary>
         /// Required designer variable.
