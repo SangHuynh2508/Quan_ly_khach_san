@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace Form_quan_ly_khach_san
 {
-    public partial class Form1 : Form
+    public partial class Dangnhap : Form
     {
-        public Form1()
+        public Dangnhap()
         {
             InitializeComponent();
+        }
+
+        private void btnThoat_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
