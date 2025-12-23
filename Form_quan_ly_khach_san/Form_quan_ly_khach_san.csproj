@@ -46,11 +46,29 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Checkin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Checkin.Designer.cs">
+      <DependentUpon>Checkin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Checkout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Checkout.Designer.cs">
+      <DependentUpon>Checkout.cs</DependentUpon>
+    </Compile>
     <Compile Include="Dangnhap.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Dangnhap.Designer.cs">
       <DependentUpon>Dangnhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DichVu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DichVu.Designer.cs">
+      <DependentUpon>DichVu.cs</DependentUpon>
     </Compile>
     <Compile Include="Main.cs">
       <SubType>Form</SubType>
@@ -66,8 +84,44 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QuanLyKhach.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuanLyKhach.Designer.cs">
+      <DependentUpon>QuanLyKhach.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TimKhach.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TimKhach.Designer.cs">
+      <DependentUpon>TimKhach.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TimNhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TimNhanVien.Designer.cs">
+      <DependentUpon>TimNhanVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="XoaKhach.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="XoaKhach.Designer.cs">
+      <DependentUpon>XoaKhach.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Checkin.resx">
+      <DependentUpon>Checkin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Checkout.resx">
+      <DependentUpon>Checkout.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Dangnhap.resx">
       <DependentUpon>Dangnhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DichVu.resx">
+      <DependentUpon>DichVu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main.resx">
+      <DependentUpon>Main.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Phanquyen.resx">
       <DependentUpon>Phanquyen.cs</DependentUpon>
@@ -81,6 +135,18 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="QuanLyKhach.resx">
+      <DependentUpon>QuanLyKhach.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TimKhach.resx">
+      <DependentUpon>TimKhach.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TimNhanVien.resx">
+      <DependentUpon>TimNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XoaKhach.resx">
+      <DependentUpon>XoaKhach.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
