@@ -1,9 +1,9 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\BaiTapCode\\C_Sharp\\Form_quan_ly_khach_san\\",
+  "WorkspaceRootPath": "D:\\Quan_ly_khach_san\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{ECE42D75-C295-496E-AEC6-2CD99401F32C}|Form_quan_ly_khach_san\\Form_quan_ly_khach_san.csproj|d:\\baitapcode\\c_sharp\\form_quan_ly_khach_san\\form_quan_ly_khach_san\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{ECE42D75-C295-496E-AEC6-2CD99401F32C}|Form_quan_ly_khach_san\\Form_quan_ly_khach_san.csproj|d:\\quan_ly_khach_san\\form_quan_ly_khach_san\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{ECE42D75-C295-496E-AEC6-2CD99401F32C}|Form_quan_ly_khach_san\\Form_quan_ly_khach_san.csproj|solutionrelative:form_quan_ly_khach_san\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
@@ -14,15 +14,27 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 2,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Form1.cs [Design]",
+              "DocumentMoniker": "D:\\Quan_ly_khach_san\\Form_quan_ly_khach_san\\Form1.cs",
+              "RelativeDocumentMoniker": "Form_quan_ly_khach_san\\Form1.cs",
+              "ToolTip": "D:\\Quan_ly_khach_san\\Form_quan_ly_khach_san\\Form1.cs [Design]",
+              "RelativeToolTip": "Form_quan_ly_khach_san\\Form1.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-21T15:31:50.864Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Bookmark",
@@ -31,18 +43,6 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{40ea2e6b-2121-4bb8-a43e-c83c04b51041}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Form1.cs [Design]",
-              "DocumentMoniker": "D:\\BaiTapCode\\C_Sharp\\Form_quan_ly_khach_san\\Form_quan_ly_khach_san\\Form1.cs",
-              "RelativeDocumentMoniker": "Form_quan_ly_khach_san\\Form1.cs",
-              "ToolTip": "D:\\BaiTapCode\\C_Sharp\\Form_quan_ly_khach_san\\Form_quan_ly_khach_san\\Form1.cs [Design]",
-              "RelativeToolTip": "Form_quan_ly_khach_san\\Form1.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-21T15:31:50.864Z",
-              "EditorCaption": " [Design]"
             }
           ]
         }
