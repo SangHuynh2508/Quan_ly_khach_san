@@ -147,18 +147,22 @@
             // columnHeader1
             // 
             this.columnHeader1.Text = "Mã Check-in";
+            this.columnHeader1.Width = 120;
             // 
             // columnHeader2
             // 
             this.columnHeader2.Text = "Mã dịch vụ";
+            this.columnHeader2.Width = 120;
             // 
             // columnHeader3
             // 
             this.columnHeader3.Text = "Ngày";
+            this.columnHeader3.Width = 120;
             // 
             // columnHeader4
             // 
             this.columnHeader4.Text = "Thành tiền";
+            this.columnHeader4.Width = 120;
             // 
             // DichVu
             // 

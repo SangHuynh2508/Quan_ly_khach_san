@@ -38,11 +38,10 @@
             this.quảnLýToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.MnQuanLyKhachHang = new System.Windows.Forms.ToolStripMenuItem();
             this.MnCheckin = new System.Windows.Forms.ToolStripMenuItem();
-            this.MnLuuTru = new System.Windows.Forms.ToolStripMenuItem();
+            this.MnCheckout = new System.Windows.Forms.ToolStripMenuItem();
             this.MnTimKiem = new System.Windows.Forms.ToolStripMenuItem();
             this.MnCapNhat = new System.Windows.Forms.ToolStripMenuItem();
             this.MnXoaKhach = new System.Windows.Forms.ToolStripMenuItem();
-            this.MnCheckout = new System.Windows.Forms.ToolStripMenuItem();
             this.MnQuanLyDichVu = new System.Windows.Forms.ToolStripMenuItem();
             this.MnQuanLyNhanVien = new System.Windows.Forms.ToolStripMenuItem();
             this.MnCapNhatNV = new System.Windows.Forms.ToolStripMenuItem();
@@ -121,7 +120,6 @@
             this.MnQuanLyKhachHang.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.MnCheckin,
             this.MnCheckout,
-            this.MnLuuTru,
             this.MnTimKiem,
             this.MnCapNhat,
             this.MnXoaKhach});
@@ -137,12 +135,12 @@
             this.MnCheckin.Size = new System.Drawing.Size(224, 26);
             this.MnCheckin.Text = "Check-in";
             // 
-            // MnLuuTru
+            // MnCheckout
             // 
-            this.MnLuuTru.Image = ((System.Drawing.Image)(resources.GetObject("MnLuuTru.Image")));
-            this.MnLuuTru.Name = "MnLuuTru";
-            this.MnLuuTru.Size = new System.Drawing.Size(224, 26);
-            this.MnLuuTru.Text = "Lưu trữ";
+            this.MnCheckout.Image = ((System.Drawing.Image)(resources.GetObject("MnCheckout.Image")));
+            this.MnCheckout.Name = "MnCheckout";
+            this.MnCheckout.Size = new System.Drawing.Size(224, 26);
+            this.MnCheckout.Text = "Check-out";
             // 
             // MnTimKiem
             // 
@@ -164,13 +162,6 @@
             this.MnXoaKhach.Name = "MnXoaKhach";
             this.MnXoaKhach.Size = new System.Drawing.Size(224, 26);
             this.MnXoaKhach.Text = "Xóa khách";
-            // 
-            // MnCheckout
-            // 
-            this.MnCheckout.Image = ((System.Drawing.Image)(resources.GetObject("MnCheckout.Image")));
-            this.MnCheckout.Name = "MnCheckout";
-            this.MnCheckout.Size = new System.Drawing.Size(224, 26);
-            this.MnCheckout.Text = "Check-out";
             // 
             // MnQuanLyDichVu
             // 
@@ -267,7 +258,6 @@
         private System.Windows.Forms.ToolStripMenuItem MnQuanLyKhachHang;
         private System.Windows.Forms.ToolStripMenuItem MnCheckin;
         private System.Windows.Forms.ToolStripMenuItem MnCheckout;
-        private System.Windows.Forms.ToolStripMenuItem MnLuuTru;
         private System.Windows.Forms.ToolStripMenuItem MnTimKiem;
         private System.Windows.Forms.ToolStripMenuItem MnCapNhat;
         private System.Windows.Forms.ToolStripMenuItem MnXoaKhach;

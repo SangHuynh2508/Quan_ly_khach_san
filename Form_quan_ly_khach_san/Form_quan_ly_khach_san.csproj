@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AboutUs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AboutUs.Designer.cs">
+      <DependentUpon>AboutUs.cs</DependentUpon>
+    </Compile>
     <Compile Include="Checkin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -90,6 +96,30 @@
     <Compile Include="QuanLyKhach.Designer.cs">
       <DependentUpon>QuanLyKhach.cs</DependentUpon>
     </Compile>
+    <Compile Include="ThayDoiMatKhau.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ThayDoiMatKhau.Designer.cs">
+      <DependentUpon>ThayDoiMatKhau.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ThayDoiTTKhach.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ThayDoiTTKhach.Designer.cs">
+      <DependentUpon>ThayDoiTTKhach.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ThayDoiTTNhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ThayDoiTTNhanVien.Designer.cs">
+      <DependentUpon>ThayDoiTTNhanVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ThemNhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ThemNhanVien.Designer.cs">
+      <DependentUpon>ThemNhanVien.cs</DependentUpon>
+    </Compile>
     <Compile Include="TimKhach.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -108,6 +138,9 @@
     <Compile Include="XoaKhach.Designer.cs">
       <DependentUpon>XoaKhach.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AboutUs.resx">
+      <DependentUpon>AboutUs.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Checkin.resx">
       <DependentUpon>Checkin.cs</DependentUpon>
     </EmbeddedResource>
@@ -137,6 +170,18 @@
     </Compile>
     <EmbeddedResource Include="QuanLyKhach.resx">
       <DependentUpon>QuanLyKhach.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ThayDoiMatKhau.resx">
+      <DependentUpon>ThayDoiMatKhau.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ThayDoiTTKhach.resx">
+      <DependentUpon>ThayDoiTTKhach.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ThayDoiTTNhanVien.resx">
+      <DependentUpon>ThayDoiTTNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ThemNhanVien.resx">
+      <DependentUpon>ThemNhanVien.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TimKhach.resx">
       <DependentUpon>TimKhach.cs</DependentUpon>
