@@ -42,18 +42,20 @@
             // 
             // btnTim
             // 
-            this.btnTim.Location = new System.Drawing.Point(219, 512);
+            this.btnTim.Location = new System.Drawing.Point(184, 633);
+            this.btnTim.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnTim.Name = "btnTim";
-            this.btnTim.Size = new System.Drawing.Size(75, 23);
+            this.btnTim.Size = new System.Drawing.Size(112, 41);
             this.btnTim.TabIndex = 0;
             this.btnTim.Text = "Tìm";
             this.btnTim.UseVisualStyleBackColor = true;
             // 
             // btnThoat
             // 
-            this.btnThoat.Location = new System.Drawing.Point(461, 512);
+            this.btnThoat.Location = new System.Drawing.Point(437, 633);
+            this.btnThoat.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnThoat.Name = "btnThoat";
-            this.btnThoat.Size = new System.Drawing.Size(75, 23);
+            this.btnThoat.Size = new System.Drawing.Size(112, 41);
             this.btnThoat.TabIndex = 1;
             this.btnThoat.Text = "Thoát";
             this.btnThoat.UseVisualStyleBackColor = true;
@@ -61,9 +63,10 @@
             // rdbTimTheoTenNV
             // 
             this.rdbTimTheoTenNV.AutoSize = true;
-            this.rdbTimTheoTenNV.Location = new System.Drawing.Point(157, 51);
+            this.rdbTimTheoTenNV.Location = new System.Drawing.Point(177, 64);
+            this.rdbTimTheoTenNV.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.rdbTimTheoTenNV.Name = "rdbTimTheoTenNV";
-            this.rdbTimTheoTenNV.Size = new System.Drawing.Size(123, 20);
+            this.rdbTimTheoTenNV.Size = new System.Drawing.Size(148, 24);
             this.rdbTimTheoTenNV.TabIndex = 2;
             this.rdbTimTheoTenNV.TabStop = true;
             this.rdbTimTheoTenNV.Text = "Tìm theo tên NV";
@@ -72,9 +75,10 @@
             // rdbTimTheoSDT
             // 
             this.rdbTimTheoSDT.AutoSize = true;
-            this.rdbTimTheoSDT.Location = new System.Drawing.Point(476, 51);
+            this.rdbTimTheoSDT.Location = new System.Drawing.Point(536, 64);
+            this.rdbTimTheoSDT.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.rdbTimTheoSDT.Name = "rdbTimTheoSDT";
-            this.rdbTimTheoSDT.Size = new System.Drawing.Size(110, 20);
+            this.rdbTimTheoSDT.Size = new System.Drawing.Size(131, 24);
             this.rdbTimTheoSDT.TabIndex = 3;
             this.rdbTimTheoSDT.TabStop = true;
             this.rdbTimTheoSDT.Text = "Tìm theo SĐT";
@@ -83,50 +87,53 @@
             // dgvTimNhanVien
             // 
             this.dgvTimNhanVien.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvTimNhanVien.Location = new System.Drawing.Point(60, 227);
+            this.dgvTimNhanVien.Location = new System.Drawing.Point(68, 284);
+            this.dgvTimNhanVien.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dgvTimNhanVien.Name = "dgvTimNhanVien";
             this.dgvTimNhanVien.RowHeadersWidth = 51;
             this.dgvTimNhanVien.RowTemplate.Height = 24;
-            this.dgvTimNhanVien.Size = new System.Drawing.Size(704, 257);
+            this.dgvTimNhanVien.Size = new System.Drawing.Size(792, 321);
             this.dgvTimNhanVien.TabIndex = 4;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(157, 119);
+            this.label1.Location = new System.Drawing.Point(177, 149);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(91, 16);
+            this.label1.Size = new System.Drawing.Size(108, 20);
             this.label1.TabIndex = 5;
             this.label1.Text = "Tên nhân viên";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(160, 180);
+            this.label2.Location = new System.Drawing.Point(180, 225);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(94, 16);
+            this.label2.Size = new System.Drawing.Size(113, 20);
             this.label2.TabIndex = 6;
             this.label2.Text = "SĐT nhân viên";
             // 
             // txtTenNV
             // 
-            this.txtTenNV.Location = new System.Drawing.Point(272, 119);
+            this.txtTenNV.Location = new System.Drawing.Point(306, 149);
+            this.txtTenNV.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtTenNV.Name = "txtTenNV";
-            this.txtTenNV.Size = new System.Drawing.Size(197, 22);
+            this.txtTenNV.Size = new System.Drawing.Size(221, 26);
             this.txtTenNV.TabIndex = 7;
             // 
             // txtSDTNV
             // 
-            this.txtSDTNV.Location = new System.Drawing.Point(272, 173);
+            this.txtSDTNV.Location = new System.Drawing.Point(306, 216);
+            this.txtSDTNV.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtSDTNV.Name = "txtSDTNV";
-            this.txtSDTNV.Size = new System.Drawing.Size(197, 22);
+            this.txtSDTNV.Size = new System.Drawing.Size(221, 26);
             this.txtSDTNV.TabIndex = 8;
             // 
             // TimNhanVien
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 561);
+            this.ClientSize = new System.Drawing.Size(900, 701);
             this.Controls.Add(this.txtSDTNV);
             this.Controls.Add(this.txtTenNV);
             this.Controls.Add(this.label2);
@@ -136,6 +143,7 @@
             this.Controls.Add(this.rdbTimTheoTenNV);
             this.Controls.Add(this.btnThoat);
             this.Controls.Add(this.btnTim);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "TimNhanVien";
             this.Text = "TimNhanVien";
             ((System.ComponentModel.ISupportInitialize)(this.dgvTimNhanVien)).EndInit();

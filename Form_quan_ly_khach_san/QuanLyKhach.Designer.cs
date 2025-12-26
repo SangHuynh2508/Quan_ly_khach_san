@@ -56,6 +56,7 @@
             this.btnSuaThongTin.TabIndex = 1;
             this.btnSuaThongTin.Text = "Sửa thông tin";
             this.btnSuaThongTin.UseVisualStyleBackColor = true;
+            this.btnSuaThongTin.Click += new System.EventHandler(this.btnSuaThongTin_Click);
             // 
             // btnTimKiem
             // 
@@ -66,6 +67,7 @@
             this.btnTimKiem.TabIndex = 2;
             this.btnTimKiem.Text = "Tìm kiếm";
             this.btnTimKiem.UseVisualStyleBackColor = true;
+            this.btnTimKiem.Click += new System.EventHandler(this.btnTimKiem_Click);
             // 
             // btnXoaThongTin
             // 
@@ -101,6 +103,7 @@
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "QuanLyKhach";
             this.Text = "QuanLyKhach";
+            this.Load += new System.EventHandler(this.QuanLyKhach_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvQuanLyKhach)).EndInit();
             this.ResumeLayout(false);
 

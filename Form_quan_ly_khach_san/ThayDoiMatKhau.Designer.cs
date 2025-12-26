@@ -71,6 +71,7 @@
             this.btnXacNhan.TabIndex = 3;
             this.btnXacNhan.Text = "Xác nhận";
             this.btnXacNhan.UseVisualStyleBackColor = true;
+            this.btnXacNhan.Click += new System.EventHandler(this.btnXacNhan_Click);
             // 
             // btnThoat
             // 
@@ -81,6 +82,7 @@
             this.btnThoat.TabIndex = 4;
             this.btnThoat.Text = "Thoát";
             this.btnThoat.UseVisualStyleBackColor = true;
+            this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
             // 
             // label1
             // 
@@ -125,6 +127,7 @@
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "ThayDoiMatKhau";
             this.Text = "ThayDoiMatKhau";
+            this.Load += new System.EventHandler(this.ThayDoiMatKhau_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

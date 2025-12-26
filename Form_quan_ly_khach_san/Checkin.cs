@@ -98,6 +98,7 @@ namespace Form_quan_ly_khach_san
                 }
 
                 MessageBox.Show($"Check-in thành công {tatCaPhongThue.Count} phòng!");
+                this.DialogResult = DialogResult.OK;
                 ResetForm();
             }
             catch (Exception ex)

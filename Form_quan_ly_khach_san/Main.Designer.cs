@@ -52,6 +52,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.label2 = new System.Windows.Forms.Label();
+            this.MnQLKhach = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -66,7 +67,7 @@
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(7, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(900, 36);
+            this.menuStrip1.Size = new System.Drawing.Size(900, 33);
             this.menuStrip1.TabIndex = 0;
             // 
             // tàiKhoảnToolStripMenuItem
@@ -130,7 +131,8 @@
             this.MnCheckout,
             this.MnTimKiem,
             this.MnCapNhat,
-            this.MnXoaKhach});
+            this.MnXoaKhach,
+            this.MnQLKhach});
             this.MnQuanLyKhachHang.Image = ((System.Drawing.Image)(resources.GetObject("MnQuanLyKhachHang.Image")));
             this.MnQuanLyKhachHang.Name = "MnQuanLyKhachHang";
             this.MnQuanLyKhachHang.Size = new System.Drawing.Size(271, 34);
@@ -254,6 +256,14 @@
             this.label2.TabIndex = 3;
             this.label2.Text = "label2";
             // 
+            // MnQLKhach
+            // 
+            this.MnQLKhach.Image = ((System.Drawing.Image)(resources.GetObject("MnQLKhach.Image")));
+            this.MnQLKhach.Name = "MnQLKhach";
+            this.MnQLKhach.Size = new System.Drawing.Size(270, 34);
+            this.MnQLKhach.Text = "Danh sách khách";
+            this.MnQLKhach.Click += new System.EventHandler(this.MnQLKhach_Click);
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -299,6 +309,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ToolStripMenuItem MnQLKhach;
     }
 }
 

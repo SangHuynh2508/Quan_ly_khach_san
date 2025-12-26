@@ -174,6 +174,10 @@ namespace Form_quan_ly_khach_san
             s = s.Substring(1, s.Length - 1) + tam;
         }
 
-        
+        private void MnQLKhach_Click(object sender, EventArgs e)
+        {
+            QuanLyKhach quanLyKhach = new QuanLyKhach();
+            quanLyKhach.ShowDialog();
+        }
     }
 }

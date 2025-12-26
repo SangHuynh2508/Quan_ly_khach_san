@@ -33,29 +33,25 @@ namespace Form_quan_ly_khach_san
         {
             string ten = txtTendn.Text.Trim();
             string mk = txtMatKhau.Text.Trim();
-
-            if (string.IsNullOrEmpty(ten) || string.IsNullOrEmpty(mk))
-            {
-                MessageBox.Show("Vui lòng nhập tài khoản và mật khẩu!");
-                return;
-            }
             if (nvBus.DangNhap(ten, mk))
             {
                 var nv = nvBus.LayThongTin(ten);
-                KtraDangNhap.strmanhanvien = nv.MaNV;
-                KtraDangNhap.strhoten = nv.HoTen;
-                KtraDangNhap.strquyenhan = nv.Quyen.Trim();
-                KtraDangNhap.strnguoidung = nv.TaiKhoan;
 
-                MessageBox.Show($"Chào mừng {KtraDangNhap.strhoten}!");
-                this.DialogResult = DialogResult.OK; 
-                this.Close();
+                if (nv != null)
+                {
+                    KtraDangNhap.strmanhanvien = nv.MaNV;
+                    KtraDangNhap.strhoten = nv.HoTen;
+                    KtraDangNhap.strnguoidung = nv.TaiKhoan;
+                    KtraDangNhap.strquyenhan = nv.Quyen.Trim();
+
+                    MessageBox.Show($"Chào mừng {KtraDangNhap.strhoten}!");
+                    this.DialogResult = DialogResult.OK;
+                    this.Close();
+                }
             }
             else
             {
                 MessageBox.Show("Tài khoản hoặc mật khẩu không chính xác!");
-                txtMatKhau.Clear();
-                txtMatKhau.Focus();
             }
         }
 
@@ -64,6 +60,7 @@ namespace Form_quan_ly_khach_san
             SendMessage(txtTendn.Handle, EM_SETCUEBANNER, 0, "Nhập tên đăng nhập...");
             SendMessage(txtMatKhau.Handle, EM_SETCUEBANNER, 0, "Nhập mật khẩu...");
             this.ActiveControl = btnDangnhap;
+            txtMatKhau.UseSystemPasswordChar = true;
         }
 
 

@@ -52,6 +52,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CheckinBUS.cs" />
+    <Compile Include="KhachHangBUS.cs" />
     <Compile Include="NhanVienBUS.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
