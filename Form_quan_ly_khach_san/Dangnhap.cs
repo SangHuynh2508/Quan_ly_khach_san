@@ -8,11 +8,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Runtime.InteropServices;
 
 namespace Form_quan_ly_khach_san
 {
     public partial class Dangnhap : Form
     {
+        [DllImport("user32.dll", CharSet = CharSet.Auto)]
+        private static extern Int32 SendMessage(IntPtr hWnd, int msg, int wParam, [MarshalAs(UnmanagedType.LPWStr)] string lParam);
+        private const int EM_SETCUEBANNER = 0x1501;
         public Dangnhap()
         {
             InitializeComponent();
@@ -45,5 +49,14 @@ namespace Form_quan_ly_khach_san
                 txtMatKhau.Focus();
             }
         }
+
+        private void Dangnhap_Load(object sender, EventArgs e)
+        {
+            SendMessage(txtTendn.Handle, EM_SETCUEBANNER, 0, "Nhập tên đăng nhập...");
+            SendMessage(txtMatKhau.Handle, EM_SETCUEBANNER, 0, "Nhập mật khẩu...");
+            this.ActiveControl = btnDangnhap;
+        }
+
+
     }
 }

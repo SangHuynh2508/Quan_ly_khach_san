@@ -38,36 +38,41 @@
             // 
             // btnThemKhach
             // 
-            this.btnThemKhach.Location = new System.Drawing.Point(67, 385);
+            this.btnThemKhach.Location = new System.Drawing.Point(75, 481);
+            this.btnThemKhach.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnThemKhach.Name = "btnThemKhach";
-            this.btnThemKhach.Size = new System.Drawing.Size(103, 33);
+            this.btnThemKhach.Size = new System.Drawing.Size(116, 41);
             this.btnThemKhach.TabIndex = 0;
             this.btnThemKhach.Text = "Thêm khách";
             this.btnThemKhach.UseVisualStyleBackColor = true;
+            this.btnThemKhach.Click += new System.EventHandler(this.btnThemKhach_Click);
             // 
             // btnSuaThongTin
             // 
-            this.btnSuaThongTin.Location = new System.Drawing.Point(220, 385);
+            this.btnSuaThongTin.Location = new System.Drawing.Point(248, 481);
+            this.btnSuaThongTin.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnSuaThongTin.Name = "btnSuaThongTin";
-            this.btnSuaThongTin.Size = new System.Drawing.Size(104, 32);
+            this.btnSuaThongTin.Size = new System.Drawing.Size(117, 40);
             this.btnSuaThongTin.TabIndex = 1;
             this.btnSuaThongTin.Text = "Sửa thông tin";
             this.btnSuaThongTin.UseVisualStyleBackColor = true;
             // 
             // btnTimKiem
             // 
-            this.btnTimKiem.Location = new System.Drawing.Point(415, 385);
+            this.btnTimKiem.Location = new System.Drawing.Point(467, 481);
+            this.btnTimKiem.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnTimKiem.Name = "btnTimKiem";
-            this.btnTimKiem.Size = new System.Drawing.Size(75, 32);
+            this.btnTimKiem.Size = new System.Drawing.Size(84, 40);
             this.btnTimKiem.TabIndex = 2;
             this.btnTimKiem.Text = "Tìm kiếm";
             this.btnTimKiem.UseVisualStyleBackColor = true;
             // 
             // btnXoaThongTin
             // 
-            this.btnXoaThongTin.Location = new System.Drawing.Point(563, 385);
+            this.btnXoaThongTin.Location = new System.Drawing.Point(633, 481);
+            this.btnXoaThongTin.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnXoaThongTin.Name = "btnXoaThongTin";
-            this.btnXoaThongTin.Size = new System.Drawing.Size(118, 32);
+            this.btnXoaThongTin.Size = new System.Drawing.Size(133, 40);
             this.btnXoaThongTin.TabIndex = 3;
             this.btnXoaThongTin.Text = "Xóa thông tin";
             this.btnXoaThongTin.UseVisualStyleBackColor = true;
@@ -75,23 +80,25 @@
             // dgvQuanLyKhach
             // 
             this.dgvQuanLyKhach.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvQuanLyKhach.Location = new System.Drawing.Point(43, 32);
+            this.dgvQuanLyKhach.Location = new System.Drawing.Point(48, 40);
+            this.dgvQuanLyKhach.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dgvQuanLyKhach.Name = "dgvQuanLyKhach";
             this.dgvQuanLyKhach.RowHeadersWidth = 51;
             this.dgvQuanLyKhach.RowTemplate.Height = 24;
-            this.dgvQuanLyKhach.Size = new System.Drawing.Size(701, 331);
+            this.dgvQuanLyKhach.Size = new System.Drawing.Size(789, 414);
             this.dgvQuanLyKhach.TabIndex = 4;
             // 
             // QuanLyKhach
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(900, 562);
             this.Controls.Add(this.dgvQuanLyKhach);
             this.Controls.Add(this.btnXoaThongTin);
             this.Controls.Add(this.btnTimKiem);
             this.Controls.Add(this.btnSuaThongTin);
             this.Controls.Add(this.btnThemKhach);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "QuanLyKhach";
             this.Text = "QuanLyKhach";
             ((System.ComponentModel.ISupportInitialize)(this.dgvQuanLyKhach)).EndInit();

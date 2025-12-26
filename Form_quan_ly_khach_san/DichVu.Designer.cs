@@ -48,53 +48,56 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(75, 242);
+            this.label1.Location = new System.Drawing.Point(84, 302);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(81, 16);
+            this.label1.Size = new System.Drawing.Size(97, 20);
             this.label1.TabIndex = 0;
             this.label1.Text = "Mã Check-in";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(75, 310);
+            this.label2.Location = new System.Drawing.Point(84, 388);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(40, 16);
+            this.label2.Size = new System.Drawing.Size(45, 20);
             this.label2.TabIndex = 1;
             this.label2.Text = "Ngày";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(75, 377);
+            this.label3.Location = new System.Drawing.Point(84, 471);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(76, 16);
+            this.label3.Size = new System.Drawing.Size(89, 20);
             this.label3.TabIndex = 2;
             this.label3.Text = "Tên dịch vụ";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(75, 444);
+            this.label4.Location = new System.Drawing.Point(84, 555);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(52, 16);
+            this.label4.Size = new System.Drawing.Size(64, 20);
             this.label4.TabIndex = 3;
             this.label4.Text = "Giá tiền";
             // 
             // btnThem
             // 
-            this.btnThem.Location = new System.Drawing.Point(39, 524);
+            this.btnThem.Location = new System.Drawing.Point(44, 655);
+            this.btnThem.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnThem.Name = "btnThem";
-            this.btnThem.Size = new System.Drawing.Size(75, 23);
+            this.btnThem.Size = new System.Drawing.Size(84, 29);
             this.btnThem.TabIndex = 4;
             this.btnThem.Text = "Thêm";
             this.btnThem.UseVisualStyleBackColor = true;
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // btnThoat
             // 
-            this.btnThoat.Location = new System.Drawing.Point(237, 523);
+            this.btnThoat.Location = new System.Drawing.Point(267, 654);
+            this.btnThoat.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnThoat.Name = "btnThoat";
-            this.btnThoat.Size = new System.Drawing.Size(75, 23);
+            this.btnThoat.Size = new System.Drawing.Size(84, 29);
             this.btnThoat.TabIndex = 5;
             this.btnThoat.Text = "Thoát";
             this.btnThoat.UseVisualStyleBackColor = true;
@@ -102,31 +105,35 @@
             // cmbMaCheckin
             // 
             this.cmbMaCheckin.FormattingEnabled = true;
-            this.cmbMaCheckin.Location = new System.Drawing.Point(219, 242);
+            this.cmbMaCheckin.Location = new System.Drawing.Point(246, 302);
+            this.cmbMaCheckin.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.cmbMaCheckin.Name = "cmbMaCheckin";
-            this.cmbMaCheckin.Size = new System.Drawing.Size(232, 24);
+            this.cmbMaCheckin.Size = new System.Drawing.Size(260, 28);
             this.cmbMaCheckin.TabIndex = 6;
             // 
             // cmbTenDichVu
             // 
             this.cmbTenDichVu.FormattingEnabled = true;
-            this.cmbTenDichVu.Location = new System.Drawing.Point(219, 377);
+            this.cmbTenDichVu.Location = new System.Drawing.Point(246, 471);
+            this.cmbTenDichVu.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.cmbTenDichVu.Name = "cmbTenDichVu";
-            this.cmbTenDichVu.Size = new System.Drawing.Size(232, 24);
+            this.cmbTenDichVu.Size = new System.Drawing.Size(260, 28);
             this.cmbTenDichVu.TabIndex = 7;
             // 
             // txtNgay
             // 
-            this.txtNgay.Location = new System.Drawing.Point(219, 303);
+            this.txtNgay.Location = new System.Drawing.Point(246, 379);
+            this.txtNgay.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtNgay.Name = "txtNgay";
-            this.txtNgay.Size = new System.Drawing.Size(232, 22);
+            this.txtNgay.Size = new System.Drawing.Size(260, 26);
             this.txtNgay.TabIndex = 8;
             // 
             // txtGiaTien
             // 
-            this.txtGiaTien.Location = new System.Drawing.Point(219, 444);
+            this.txtGiaTien.Location = new System.Drawing.Point(246, 555);
+            this.txtGiaTien.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtGiaTien.Name = "txtGiaTien";
-            this.txtGiaTien.Size = new System.Drawing.Size(232, 22);
+            this.txtGiaTien.Size = new System.Drawing.Size(260, 26);
             this.txtGiaTien.TabIndex = 9;
             // 
             // listView1
@@ -137,9 +144,10 @@
             this.columnHeader3,
             this.columnHeader4});
             this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(121, 26);
+            this.listView1.Location = new System.Drawing.Point(136, 32);
+            this.listView1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(583, 154);
+            this.listView1.Size = new System.Drawing.Size(655, 192);
             this.listView1.TabIndex = 10;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
@@ -166,9 +174,9 @@
             // 
             // DichVu
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 560);
+            this.ClientSize = new System.Drawing.Size(900, 700);
             this.Controls.Add(this.listView1);
             this.Controls.Add(this.txtGiaTien);
             this.Controls.Add(this.txtNgay);
@@ -180,6 +188,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "DichVu";
             this.Text = "DichVu";
             this.ResumeLayout(false);

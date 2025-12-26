@@ -16,5 +16,10 @@ namespace Form_quan_ly_khach_san
         {
             InitializeComponent();
         }
+
+        private void btnThemKhach_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
