@@ -1,4 +1,4 @@
-namespace Form_quan_ly_khach_san.Models
+namespace QLKS.DAL.Models
 {
     using System;
     using System.Collections.Generic;
@@ -6,26 +6,34 @@ namespace Form_quan_ly_khach_san.Models
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
 
-    [Table("LoaiPhong")]
-    public partial class LoaiPhong
+    [Table("Phong")]
+    public partial class Phong
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public LoaiPhong()
+        public Phong()
         {
-            Phongs = new HashSet<Phong>();
+            PhieuThues = new HashSet<PhieuThue>();
         }
 
         [Key]
         [StringLength(10)]
-        public string MaLoai { get; set; }
+        public string MaPhong { get; set; }
 
         [Required]
         [StringLength(50)]
-        public string TenLoai { get; set; }
+        public string TenPhong { get; set; }
 
-        public decimal DonGia { get; set; }
+        [Required]
+        [StringLength(10)]
+        public string MaLoai { get; set; }
+
+        [Required]
+        [StringLength(20)]
+        public string TrangThai { get; set; }
+
+        public virtual LoaiPhong LoaiPhong { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Phong> Phongs { get; set; }
+        public virtual ICollection<PhieuThue> PhieuThues { get; set; }
     }
 }

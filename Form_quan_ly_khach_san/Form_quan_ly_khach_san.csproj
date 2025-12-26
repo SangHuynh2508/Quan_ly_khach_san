@@ -95,15 +95,6 @@
     <Compile Include="Main.Designer.cs">
       <DependentUpon>Main.cs</DependentUpon>
     </Compile>
-    <Compile Include="Models\ChiTietDichVu.cs" />
-    <Compile Include="Models\DichVu.cs" />
-    <Compile Include="Models\HoaDon.cs" />
-    <Compile Include="Models\KhachHang.cs" />
-    <Compile Include="Models\LoaiPhong.cs" />
-    <Compile Include="Models\NhanVien.cs" />
-    <Compile Include="Models\PhieuThue.cs" />
-    <Compile Include="Models\Phong.cs" />
-    <Compile Include="Models\QLKSContext.cs" />
     <Compile Include="Phanquyen.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -227,6 +218,16 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\QLKS.BUS\QLKS.BUS.csproj">
+      <Project>{00d042b0-eee2-4160-ab77-8805bdcdd6c4}</Project>
+      <Name>QLKS.BUS</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\QLKS.DAL\QLKS.DAL.csproj">
+      <Project>{4a2912fa-65d3-4a63-be4b-4b738c57cbfa}</Project>
+      <Name>QLKS.DAL</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

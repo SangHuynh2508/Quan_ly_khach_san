@@ -1,3 +1,5 @@
 <Solution>
   <Project Path="Form_quan_ly_khach_san/Form_quan_ly_khach_san.csproj" Id="ece42d75-c295-496e-aec6-2cd99401f32c" />
+  <Project Path="QLKS.BUS/QLKS.BUS.csproj" Id="00d042b0-eee2-4160-ab77-8805bdcdd6c4" />
+  <Project Path="QLKS.DAL/QLKS.DAL.csproj" Id="4a2912fa-65d3-4a63-be4b-4b738c57cbfa" />
 </Solution>

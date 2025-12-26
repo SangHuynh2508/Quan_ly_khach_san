@@ -1,5 +1,4 @@
-﻿using Form_quan_ly_khach_san.Models;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -8,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using QLKS.DAL.Models;
 
 namespace Form_quan_ly_khach_san
 {

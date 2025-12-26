@@ -1,4 +1,4 @@
-namespace Form_quan_ly_khach_san.Models
+namespace QLKS.DAL.Models
 {
     using System;
     using System.Collections.Generic;
@@ -6,26 +6,26 @@ namespace Form_quan_ly_khach_san.Models
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
 
-    [Table("DichVu")]
-    public partial class DichVu
+    [Table("LoaiPhong")]
+    public partial class LoaiPhong
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public DichVu()
+        public LoaiPhong()
         {
-            ChiTietDichVus = new HashSet<ChiTietDichVu>();
+            Phongs = new HashSet<Phong>();
         }
 
         [Key]
         [StringLength(10)]
-        public string MaDV { get; set; }
+        public string MaLoai { get; set; }
 
         [Required]
-        [StringLength(100)]
-        public string TenDV { get; set; }
+        [StringLength(50)]
+        public string TenLoai { get; set; }
 
         public decimal DonGia { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<ChiTietDichVu> ChiTietDichVus { get; set; }
+        public virtual ICollection<Phong> Phongs { get; set; }
     }
 }

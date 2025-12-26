@@ -1,4 +1,4 @@
-namespace Form_quan_ly_khach_san.Models
+namespace QLKS.DAL.Models
 {
     using System;
     using System.Collections.Generic;

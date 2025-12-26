@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Data.Entity;
 using System.Linq;
 
-namespace Form_quan_ly_khach_san.Models
+namespace QLKS.DAL.Models
 {
     public partial class QLKSContext : DbContext
     {
