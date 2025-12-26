@@ -57,10 +57,11 @@ namespace Form_quan_ly_khach_san
 
         private void Dangnhap_Load(object sender, EventArgs e)
         {
+            txtMatKhau.UseSystemPasswordChar = true;
             SendMessage(txtTendn.Handle, EM_SETCUEBANNER, 0, "Nhập tên đăng nhập...");
             SendMessage(txtMatKhau.Handle, EM_SETCUEBANNER, 0, "Nhập mật khẩu...");
             this.ActiveControl = btnDangnhap;
-            txtMatKhau.UseSystemPasswordChar = true;
+            
         }
 
 
