@@ -67,6 +67,7 @@
             this.listView1.TabIndex = 0;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
+            this.listView1.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged);
             // 
             // columnHeader1
             // 
@@ -238,6 +239,8 @@
             this.dgvThemNV.RowTemplate.Height = 24;
             this.dgvThemNV.Size = new System.Drawing.Size(879, 188);
             this.dgvThemNV.TabIndex = 5;
+            this.dgvThemNV.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvThemNV_CellClick);
+            this.dgvThemNV.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvThemNV_CellContentClick);
             // 
             // ThemNhanVien
             // 

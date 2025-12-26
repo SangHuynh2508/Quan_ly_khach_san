@@ -49,6 +49,7 @@
             this.btnTim.TabIndex = 0;
             this.btnTim.Text = "Tìm";
             this.btnTim.UseVisualStyleBackColor = true;
+            this.btnTim.Click += new System.EventHandler(this.btnTim_Click);
             // 
             // btnThoat
             // 
@@ -59,6 +60,7 @@
             this.btnThoat.TabIndex = 1;
             this.btnThoat.Text = "Thoát";
             this.btnThoat.UseVisualStyleBackColor = true;
+            this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
             // 
             // rdbTimTheoTenNV
             // 
@@ -71,6 +73,7 @@
             this.rdbTimTheoTenNV.TabStop = true;
             this.rdbTimTheoTenNV.Text = "Tìm theo tên NV";
             this.rdbTimTheoTenNV.UseVisualStyleBackColor = true;
+            this.rdbTimTheoTenNV.CheckedChanged += new System.EventHandler(this.rdbTimTheoTenNV_CheckedChanged);
             // 
             // rdbTimTheoSDT
             // 
@@ -83,6 +86,7 @@
             this.rdbTimTheoSDT.TabStop = true;
             this.rdbTimTheoSDT.Text = "Tìm theo SĐT";
             this.rdbTimTheoSDT.UseVisualStyleBackColor = true;
+            this.rdbTimTheoSDT.CheckedChanged += new System.EventHandler(this.rdbTimTheoSDT_CheckedChanged);
             // 
             // dgvTimNhanVien
             // 
@@ -94,6 +98,7 @@
             this.dgvTimNhanVien.RowTemplate.Height = 24;
             this.dgvTimNhanVien.Size = new System.Drawing.Size(792, 321);
             this.dgvTimNhanVien.TabIndex = 4;
+            this.dgvTimNhanVien.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvTimNhanVien_CellContentClick);
             // 
             // label1
             // 
@@ -120,6 +125,7 @@
             this.txtTenNV.Name = "txtTenNV";
             this.txtTenNV.Size = new System.Drawing.Size(221, 26);
             this.txtTenNV.TabIndex = 7;
+            this.txtTenNV.TextChanged += new System.EventHandler(this.txtTenNV_TextChanged);
             // 
             // txtSDTNV
             // 

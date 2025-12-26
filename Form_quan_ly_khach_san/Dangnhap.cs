@@ -64,6 +64,9 @@ namespace Form_quan_ly_khach_san
             
         }
 
+        private void txtTendn_TextChanged(object sender, EventArgs e)
+        {
 
+        }
     }
 }

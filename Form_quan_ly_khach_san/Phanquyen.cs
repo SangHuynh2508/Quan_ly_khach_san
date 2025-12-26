@@ -100,5 +100,10 @@ namespace Form_quan_ly_khach_san
                 }
             }
         }
+
+        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

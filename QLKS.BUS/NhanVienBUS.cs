@@ -97,6 +97,18 @@ namespace QLKS.BUS
                 return false;
             }
         }
+
+        public bool XoaNhanVien(string maNV)
+        {
+            using (var db = new QLKSContext())
+            {
+                var nv = db.NhanViens.FirstOrDefault(x => x.MaNV == maNV);
+                if (nv == null) return false;
+
+                db.NhanViens.Remove(nv);
+                return db.SaveChanges() > 0;
+            }
+        }
         #endregion
     }
 }
