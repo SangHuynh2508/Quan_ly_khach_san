@@ -101,6 +101,7 @@
             this.btnThoat.TabIndex = 5;
             this.btnThoat.Text = "Thoát";
             this.btnThoat.UseVisualStyleBackColor = true;
+            this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
             // 
             // cmbMaCheckin
             // 
@@ -119,7 +120,6 @@
             this.cmbTenDichVu.Name = "cmbTenDichVu";
             this.cmbTenDichVu.Size = new System.Drawing.Size(260, 28);
             this.cmbTenDichVu.TabIndex = 7;
-            this.cmbTenDichVu.SelectedIndexChanged += new System.EventHandler(this.cmbTenDichVu_SelectedIndexChanged);
             // 
             // txtNgay
             // 
@@ -152,7 +152,6 @@
             this.listView1.TabIndex = 10;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
-            this.listView1.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged);
             // 
             // columnHeader1
             // 

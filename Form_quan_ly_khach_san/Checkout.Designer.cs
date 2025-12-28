@@ -115,7 +115,7 @@
             this.btnThoat.Location = new System.Drawing.Point(214, 478);
             this.btnThoat.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnThoat.Name = "btnThoat";
-            this.btnThoat.Size = new System.Drawing.Size(84, 29);
+            this.btnThoat.Size = new System.Drawing.Size(111, 29);
             this.btnThoat.TabIndex = 6;
             this.btnThoat.Text = "Thoát";
             this.btnThoat.UseVisualStyleBackColor = true;
@@ -126,10 +126,11 @@
             this.btnCheckout.Location = new System.Drawing.Point(27, 479);
             this.btnCheckout.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnCheckout.Name = "btnCheckout";
-            this.btnCheckout.Size = new System.Drawing.Size(84, 29);
+            this.btnCheckout.Size = new System.Drawing.Size(101, 29);
             this.btnCheckout.TabIndex = 5;
             this.btnCheckout.Text = "Check-out";
             this.btnCheckout.UseVisualStyleBackColor = true;
+            this.btnCheckout.Click += new System.EventHandler(this.btnCheckout_Click_1);
             // 
             // label5
             // 

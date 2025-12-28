@@ -63,7 +63,8 @@ namespace Form_quan_ly_khach_san
         {
             this.Close();
         }
-#endregion
+        #endregion
+        #region treeview và listview
         private void treeView1_AfterSelect(object sender, TreeViewEventArgs e)
         {
             foreach (ListViewItem item in listView1.Items) item.Checked = false;
@@ -81,7 +82,7 @@ namespace Form_quan_ly_khach_san
                     txtManv.Text = nv.MaNV;
                     txtTendn.Text = nv.TaiKhoan;
                     string quyen = nv.Quyen.Trim();
-                    if (quyen == "ADMIN") listView1.Items[2].Checked = true;
+                    if (quyen == "ADMIN") listView1.Items[1].Checked = true;
                     else if (quyen == "NHANVIEN") listView1.Items[0].Checked = true;
                 }
             }
@@ -100,10 +101,6 @@ namespace Form_quan_ly_khach_san
                 }
             }
         }
-
-        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
+        #endregion
     }
 }

@@ -22,14 +22,9 @@ namespace Form_quan_ly_khach_san
 
         }
 
-        private void cmbTenDichVu_SelectedIndexChanged(object sender, EventArgs e)
+        private void btnThoat_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
+            this.Close();
         }
     }
 }

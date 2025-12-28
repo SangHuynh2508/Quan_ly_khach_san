@@ -21,5 +21,10 @@ namespace Form_quan_ly_khach_san
         {
 
         }
+
+        private void btnThoat_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -63,10 +63,5 @@ namespace Form_quan_ly_khach_san
             this.ActiveControl = btnDangnhap;
             
         }
-
-        private void txtTendn_TextChanged(object sender, EventArgs e)
-        {
-
-        }
     }
 }

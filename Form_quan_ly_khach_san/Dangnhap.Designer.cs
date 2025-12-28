@@ -43,7 +43,6 @@
             this.txtTendn.Name = "txtTendn";
             this.txtTendn.Size = new System.Drawing.Size(389, 26);
             this.txtTendn.TabIndex = 2;
-            this.txtTendn.TextChanged += new System.EventHandler(this.txtTendn_TextChanged);
             // 
             // txtMatKhau
             // 

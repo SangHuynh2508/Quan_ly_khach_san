@@ -21,8 +21,6 @@ namespace Form_quan_ly_khach_san
             dgvTimNhanVien.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgvTimNhanVien.MultiSelect = false;
             dgvTimNhanVien.AutoGenerateColumns = true;
-
-            // mặc định tìm theo tên
             rdbTimTheoTenNV.Checked = true;
         }
 
@@ -39,18 +37,12 @@ namespace Form_quan_ly_khach_san
                 string sdt = txtSDTNV.Text.Trim();
                 ds = ds.Where(x => x.SDT.Contains(sdt)).ToList();
             }
-
             dgvTimNhanVien.DataSource = null;
             dgvTimNhanVien.DataSource = ds;
-
-            // Ẩn những cột không cần thiết
             if (dgvTimNhanVien.Columns["MatKhau"] != null)
                 dgvTimNhanVien.Columns["MatKhau"].Visible = false;
-
             if (dgvTimNhanVien.Columns["PhieuThues"] != null)
                 dgvTimNhanVien.Columns["PhieuThues"].Visible = false;
-
-            // Đặt header
             dgvTimNhanVien.Columns["MaNV"].HeaderText = "Mã NV";
             dgvTimNhanVien.Columns["HoTen"].HeaderText = "Họ tên";
             dgvTimNhanVien.Columns["TaiKhoan"].HeaderText = "Tên đăng nhập";
@@ -79,12 +71,10 @@ namespace Form_quan_ly_khach_san
 
         private void dgvTimNhanVien_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            // có thể thêm xử lý click vào dòng để hiển thị chi tiết
         }
 
         private void txtTenNV_TextChanged(object sender, EventArgs e)
         {
-            // có thể thực hiện tìm kiếm realtime nếu muốn
         }
     }
 }
