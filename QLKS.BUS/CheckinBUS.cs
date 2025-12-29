@@ -24,6 +24,34 @@ namespace QLKS.BUS
             int nextId = int.Parse(lastPT.MaPhieu.Substring(2)) + 1;
             return "PT" + nextId.ToString("D3");
         }
+
+
+
+
+        // Lấy tất cả phiếu thuê
+        public List<PhieuThue> LayTatCaPhieuThue()
+        {
+            return db.PhieuThues.ToList();
+        }
+
+        // Lấy phiếu thuê theo mã
+        public PhieuThue LayPhieuThueTheoMa(string maPhieu)
+        {
+            return db.PhieuThues.FirstOrDefault(p => p.MaPhieu == maPhieu);
+        }
+
+
+        public List<ChiTietDichVu> LayDichVuTheoCheckin(string maPhieu)
+        {
+            return db.ChiTietDichVus
+                     .Where(c => c.MaPhieu == maPhieu)
+                     .ToList();
+        }
+
+
+
+
+
         public string ThucHienCheckin(string hoTen, string cmnd, string diaChi, string gioiTinh, int soDon, int soDoi, string maNVHienTai)
         {
             try

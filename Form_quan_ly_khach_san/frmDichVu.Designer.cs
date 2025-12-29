@@ -1,6 +1,6 @@
 ﻿namespace Form_quan_ly_khach_san
 {
-    partial class DichVu
+    partial class frmDichVu
     {
         /// <summary>
         /// Required designer variable.
@@ -29,20 +29,17 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.btnThem = new System.Windows.Forms.Button();
             this.btnThoat = new System.Windows.Forms.Button();
             this.cmbMaCheckin = new System.Windows.Forms.ComboBox();
             this.cmbTenDichVu = new System.Windows.Forms.ComboBox();
-            this.txtNgay = new System.Windows.Forms.TextBox();
             this.txtGiaTien = new System.Windows.Forms.TextBox();
             this.listView1 = new System.Windows.Forms.ListView();
-            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.colummacheckin = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.colummadicvu = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columngay = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
             // 
             // label1
@@ -54,19 +51,10 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Mã Check-in";
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(84, 388);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(45, 20);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Ngày";
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(84, 471);
+            this.label3.Location = new System.Drawing.Point(84, 442);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(89, 20);
             this.label3.TabIndex = 2;
@@ -101,6 +89,7 @@
             this.btnThoat.TabIndex = 5;
             this.btnThoat.Text = "Thoát";
             this.btnThoat.UseVisualStyleBackColor = true;
+            this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
             // 
             // cmbMaCheckin
             // 
@@ -110,23 +99,17 @@
             this.cmbMaCheckin.Name = "cmbMaCheckin";
             this.cmbMaCheckin.Size = new System.Drawing.Size(260, 28);
             this.cmbMaCheckin.TabIndex = 6;
+            this.cmbMaCheckin.SelectedIndexChanged += new System.EventHandler(this.cmbMaCheckin_SelectedIndexChanged);
             // 
             // cmbTenDichVu
             // 
             this.cmbTenDichVu.FormattingEnabled = true;
-            this.cmbTenDichVu.Location = new System.Drawing.Point(246, 471);
+            this.cmbTenDichVu.Location = new System.Drawing.Point(246, 434);
             this.cmbTenDichVu.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.cmbTenDichVu.Name = "cmbTenDichVu";
             this.cmbTenDichVu.Size = new System.Drawing.Size(260, 28);
             this.cmbTenDichVu.TabIndex = 7;
-            // 
-            // txtNgay
-            // 
-            this.txtNgay.Location = new System.Drawing.Point(246, 379);
-            this.txtNgay.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtNgay.Name = "txtNgay";
-            this.txtNgay.Size = new System.Drawing.Size(260, 26);
-            this.txtNgay.TabIndex = 8;
+            this.cmbTenDichVu.SelectedIndexChanged += new System.EventHandler(this.cmbTenDichVu_SelectedIndexChanged);
             // 
             // txtGiaTien
             // 
@@ -135,61 +118,55 @@
             this.txtGiaTien.Name = "txtGiaTien";
             this.txtGiaTien.Size = new System.Drawing.Size(260, 26);
             this.txtGiaTien.TabIndex = 9;
+            this.txtGiaTien.TextChanged += new System.EventHandler(this.txtGiaTien_TextChanged);
             // 
             // listView1
             // 
             this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader1,
-            this.columnHeader2,
-            this.columnHeader3,
-            this.columnHeader4});
+            this.colummacheckin,
+            this.colummadicvu,
+            this.columngay});
             this.listView1.HideSelection = false;
             this.listView1.Location = new System.Drawing.Point(136, 32);
             this.listView1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(655, 192);
+            this.listView1.Size = new System.Drawing.Size(492, 192);
             this.listView1.TabIndex = 10;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
+            this.listView1.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged);
             // 
-            // columnHeader1
+            // colummacheckin
             // 
-            this.columnHeader1.Text = "Mã Check-in";
-            this.columnHeader1.Width = 120;
+            this.colummacheckin.Text = "Mã Check-in";
+            this.colummacheckin.Width = 120;
             // 
-            // columnHeader2
+            // colummadicvu
             // 
-            this.columnHeader2.Text = "Mã dịch vụ";
-            this.columnHeader2.Width = 120;
+            this.colummadicvu.Text = "Mã dịch vụ";
+            this.colummadicvu.Width = 120;
             // 
-            // columnHeader3
+            // columngay
             // 
-            this.columnHeader3.Text = "Ngày";
-            this.columnHeader3.Width = 120;
+            this.columngay.Text = "Thành Tiền";
+            this.columngay.Width = 120;
             // 
-            // columnHeader4
-            // 
-            this.columnHeader4.Text = "Thành tiền";
-            this.columnHeader4.Width = 120;
-            // 
-            // DichVu
+            // frmDichVu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(900, 700);
             this.Controls.Add(this.listView1);
             this.Controls.Add(this.txtGiaTien);
-            this.Controls.Add(this.txtNgay);
             this.Controls.Add(this.cmbTenDichVu);
             this.Controls.Add(this.cmbMaCheckin);
             this.Controls.Add(this.btnThoat);
             this.Controls.Add(this.btnThem);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.Name = "DichVu";
+            this.Name = "frmDichVu";
             this.Text = "DichVu";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -199,19 +176,16 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btnThem;
         private System.Windows.Forms.Button btnThoat;
         private System.Windows.Forms.ComboBox cmbMaCheckin;
         private System.Windows.Forms.ComboBox cmbTenDichVu;
-        private System.Windows.Forms.TextBox txtNgay;
         private System.Windows.Forms.TextBox txtGiaTien;
         private System.Windows.Forms.ListView listView1;
-        private System.Windows.Forms.ColumnHeader columnHeader1;
-        private System.Windows.Forms.ColumnHeader columnHeader2;
-        private System.Windows.Forms.ColumnHeader columnHeader3;
-        private System.Windows.Forms.ColumnHeader columnHeader4;
+        private System.Windows.Forms.ColumnHeader colummacheckin;
+        private System.Windows.Forms.ColumnHeader colummadicvu;
+        private System.Windows.Forms.ColumnHeader columngay;
     }
 }

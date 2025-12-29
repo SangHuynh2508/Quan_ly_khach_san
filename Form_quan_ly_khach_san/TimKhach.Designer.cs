@@ -51,6 +51,7 @@
             this.rdbTimTheoTen.TabStop = true;
             this.rdbTimTheoTen.Text = "Tìm theo tên";
             this.rdbTimTheoTen.UseVisualStyleBackColor = true;
+            this.rdbTimTheoTen.CheckedChanged += new System.EventHandler(this.rdbTimTheoTen_CheckedChanged);
             // 
             // rdbTimTheoCMND
             // 
@@ -63,6 +64,7 @@
             this.rdbTimTheoCMND.TabStop = true;
             this.rdbTimTheoCMND.Text = "Tìm theo CMND";
             this.rdbTimTheoCMND.UseVisualStyleBackColor = true;
+            this.rdbTimTheoCMND.CheckedChanged += new System.EventHandler(this.rdbTimTheoCMND_CheckedChanged);
             // 
             // label1
             // 
@@ -89,6 +91,7 @@
             this.txtTenKhach.Name = "txtTenKhach";
             this.txtTenKhach.Size = new System.Drawing.Size(265, 26);
             this.txtTenKhach.TabIndex = 4;
+            this.txtTenKhach.TextChanged += new System.EventHandler(this.txtTenKhach_TextChanged);
             // 
             // txtSoCMND
             // 
@@ -97,6 +100,7 @@
             this.txtSoCMND.Name = "txtSoCMND";
             this.txtSoCMND.Size = new System.Drawing.Size(265, 26);
             this.txtSoCMND.TabIndex = 5;
+            this.txtSoCMND.TextChanged += new System.EventHandler(this.txtSoCMND_TextChanged);
             // 
             // dgvTimKhach
             // 
@@ -108,6 +112,7 @@
             this.dgvTimKhach.RowTemplate.Height = 24;
             this.dgvTimKhach.Size = new System.Drawing.Size(772, 188);
             this.dgvTimKhach.TabIndex = 6;
+            this.dgvTimKhach.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvTimKhach_CellContentClick);
             // 
             // btnTim
             // 
@@ -129,6 +134,7 @@
             this.btnThoat.TabIndex = 8;
             this.btnThoat.Text = "Thoát";
             this.btnThoat.UseVisualStyleBackColor = true;
+            this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
             // 
             // TimKhach
             // 
