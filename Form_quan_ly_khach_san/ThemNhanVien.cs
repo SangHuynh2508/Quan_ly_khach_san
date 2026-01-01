@@ -23,7 +23,7 @@ namespace Form_quan_ly_khach_san
         private void ThemNhanVien_Load(object sender, EventArgs e)
         {
             LoadData();
-            txtMaNV.Text = nvBus.TaoMaNVTuDong(); 
+            txtMaNV.Text = nvBus.TaoMaNVTuDong();
             txtMaNV.ReadOnly = true;
             LoadListView();
             comboBox1.Items.Clear();
@@ -53,7 +53,7 @@ namespace Form_quan_ly_khach_san
                 ListViewItem item = new ListViewItem(nv.MaNV);
                 item.SubItems.Add(nv.HoTen);
                 item.SubItems.Add(nv.TaiKhoan);
-                item.SubItems.Add(nv.Quyen); 
+                item.SubItems.Add(nv.Quyen);
                 listView1.Items.Add(item);
             }
         }

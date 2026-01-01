@@ -63,7 +63,5 @@ namespace Form_quan_ly_khach_san
             this.ActiveControl = btnDangnhap;
             
         }
-
-
     }
 }
