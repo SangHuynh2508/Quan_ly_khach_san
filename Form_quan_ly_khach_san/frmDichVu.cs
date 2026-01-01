@@ -86,28 +86,15 @@ namespace Form_quan_ly_khach_san
 
         private void cmbMaCheckin_SelectedIndexChanged(object sender, EventArgs e)
         {
+         
             if (cmbMaCheckin.SelectedValue == null)
                 return;
 
             string maPhieu = cmbMaCheckin.SelectedValue.ToString();
-
-            var phieu = checkinBUS.LayPhieuThueTheoMa(maPhieu); // Cần thêm method trong CheckinBUS
-            if (phieu != null)
-            {
-                
-
-                var dsDV = checkinBUS.LayDichVuTheoCheckin(maPhieu); // Lấy dịch vụ của phiếu
-                listView1.Items.Clear();
-                foreach (var dv in dsDV)
-                {
-                    ListViewItem item = new ListViewItem(maPhieu);
-                    item.SubItems.Add(dv.MaDV);
-                   
-                   
-                    listView1.Items.Add(item);
-                }
-            }
+            HienThiDichVuTheoPhieu(maPhieu);
         }
+
+        
 
         private void txtNgay_TextChanged(object sender, EventArgs e)
         {
@@ -127,9 +114,64 @@ namespace Form_quan_ly_khach_san
 
         }
 
+
+        private void HienThiDichVuTheoPhieu(string maPhieu)
+        {
+            var ds = dichVuBUS.LayDichVuTheoPhieu(maPhieu);
+
+            listView1.Items.Clear();
+            foreach (var ct in ds)
+            {
+                ListViewItem item = new ListViewItem(ct.MaDV);
+                item.SubItems.Add(ct.DichVu.TenDV);
+                item.SubItems.Add(ct.SoLuong.ToString());
+                item.SubItems.Add(ct.DichVu.DonGia.ToString("N0"));
+                item.SubItems.Add((ct.SoLuong * ct.DichVu.DonGia).ToString("N0"));
+
+                listView1.Items.Add(item);
+            }
+        }
+
+
+
+
+
         private void btnThoat_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void btnthemchitiet_Click(object sender, EventArgs e)
+        {
+            if (cmbMaCheckin.SelectedValue == null ||
+       cmbTenDichVu.SelectedValue == null ||
+       string.IsNullOrWhiteSpace(txtSoLuong.Text))
+            {
+                MessageBox.Show("Vui lòng chọn phiếu, dịch vụ và số lượng!");
+                return;
+            }
+
+            string maPhieu = cmbMaCheckin.SelectedValue.ToString();
+            string maDV = cmbTenDichVu.SelectedValue.ToString();
+            int soLuong;
+
+            if (!int.TryParse(txtSoLuong.Text, out soLuong) || soLuong <= 0)
+            {
+                MessageBox.Show("Số lượng không hợp lệ!");
+                return;
+            }
+
+            bool kq = dichVuBUS.ThemDichVuVaoPhieu(maPhieu, maDV, soLuong);
+
+            if (kq)
+            {
+                MessageBox.Show("Đã thêm dịch vụ cho khách!");
+                HienThiDichVuTheoPhieu(maPhieu);
+            }
+            else
+            {
+                MessageBox.Show("Thêm dịch vụ thất bại!");
+            }
         }
     }
 }

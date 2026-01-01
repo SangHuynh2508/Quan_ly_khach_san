@@ -24,8 +24,7 @@ namespace Form_quan_ly_khach_san
 
         private void LoadComboMaCheckin()
         {
-            var dsPhieu = bus.LayTatCaPhieuThue();
-            comboBox1.DataSource = dsPhieu;
+            comboBox1.DataSource = bus.LayTatCaPhieuThue();
             comboBox1.DisplayMember = "MaPhieu";
             comboBox1.ValueMember = "MaPhieu";
         }
@@ -67,9 +66,33 @@ namespace Form_quan_ly_khach_san
         private void btnCheckout_Click(object sender, EventArgs e)
         {
             string maPhieu = txtMaCheckin.Text;
-            bus.ThucHienCheckout(maPhieu);
-            MessageBox.Show("Checkout thành công!");
-            LoadComboMaCheckin(); // refresh combobox
+
+            if (string.IsNullOrEmpty(maPhieu))
+            {
+                MessageBox.Show("Chưa chọn phiếu thuê!");
+                return;
+            }
+
+            if (bus.ThucHienCheckout(maPhieu))
+            {
+                MessageBox.Show("Checkout thành công!");
+                LoadComboMaCheckin();
+                ClearForm();
+            }
+            else
+            {
+                MessageBox.Show("Checkout thất bại!");
+            }
+        }
+
+        private void ClearForm()
+        {
+            txtMaCheckin.Clear();
+            txtSoNgayThue.Clear();
+            txtPhong.Clear();
+            txtTienPhong.Clear();
+            txtTienDichVu.Clear();
+            txtTongSoTien.Clear();
         }
 
           
@@ -77,25 +100,21 @@ namespace Form_quan_ly_khach_san
         {
             if (comboBox1.SelectedItem == null) return;
 
-            var phieu = comboBox1.SelectedItem as PhieuThue;
+            PhieuThue phieu = comboBox1.SelectedItem as PhieuThue;
             if (phieu == null) return;
 
             string maPhieu = phieu.MaPhieu;
             txtMaCheckin.Text = maPhieu;
 
-            // Số ngày thuê
-            txtSoNgayThue.Text = bus.TinhSoNgayThue(maPhieu).ToString();
+            int soNgay = bus.TinhSoNgayThue(maPhieu);
+            txtSoNgayThue.Text = soNgay.ToString();
 
-            // Phòng + tiền phòng
-            var (tenPhong, donGiaPhong) = bus.LayThongTinPhong(maPhieu);
+            var (tenPhong, donGia) = bus.LayThongTinPhong(maPhieu);
             txtPhong.Text = tenPhong;
-            txtTienPhong.Text = (donGiaPhong * bus.TinhSoNgayThue(maPhieu)).ToString();
+            txtTienPhong.Text = (donGia * soNgay).ToString("N0");
 
-            // Tiền dịch vụ
-            txtTienDichVu.Text = bus.TinhTienDichVu(maPhieu).ToString();
-
-            // Tổng tiền
-            txtTongSoTien.Text = bus.TinhTongTien(maPhieu).ToString();
+            txtTienDichVu.Text = bus.TinhTienDichVu(maPhieu).ToString("N0");
+            txtTongSoTien.Text = bus.TinhTongTien(maPhieu).ToString("N0");
         }
     }
 }

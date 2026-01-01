@@ -9,10 +9,12 @@ namespace QLKS.BUS
     {
         private QLKSContext db = new QLKSContext();
 
-        // Lấy tất cả phiếu thuê
+        // Lấy tất cả phiếu thuê CHƯA checkout
         public List<PhieuThue> LayTatCaPhieuThue()
         {
-            return db.PhieuThues.ToList();
+            return db.PhieuThues
+                     .Where(p => p.NgayDi == null)
+                     .ToList();
         }
 
         // Lấy phiếu thuê theo mã
@@ -27,14 +29,15 @@ namespace QLKS.BUS
             var phieu = LayPhieuThueTheoMa(maPhieu);
             if (phieu == null) return 0;
 
-            DateTime ngayDen = phieu.NgayDen;
-            DateTime ngayDi = phieu.NgayDi ?? DateTime.Now; // nếu chưa có ngày đi thì tính đến hôm nay
+            DateTime ngayDen = phieu.NgayDen.Date;
+            DateTime ngayDi = DateTime.Now.Date;
 
             int soNgay = (ngayDi - ngayDen).Days;
-            return soNgay > 0 ? soNgay : 1; // tối thiểu 1 ngày
+
+            return soNgay <= 0 ? 1 : soNgay;
         }
 
-        // Lấy thông tin phòng: tên phòng + đơn giá loại phòng
+        // Lấy thông tin phòng
         public (string tenPhong, decimal donGiaPhong) LayThongTinPhong(string maPhieu)
         {
             var phieu = LayPhieuThueTheoMa(maPhieu);
@@ -52,13 +55,14 @@ namespace QLKS.BUS
         // Tính tiền dịch vụ
         public decimal TinhTienDichVu(string maPhieu)
         {
-            var dsDV = db.ChiTietDichVus.Where(c => c.MaPhieu == maPhieu).ToList();
+            var ds = db.ChiTietDichVus.Where(c => c.MaPhieu == maPhieu).ToList();
             decimal tong = 0;
-            foreach (var dv in dsDV)
+
+            foreach (var ct in ds)
             {
-                var dichVu = db.DichVus.FirstOrDefault(d => d.MaDV == dv.MaDV);
-                if (dichVu != null)
-                    tong += dichVu.DonGia * dv.SoLuong;
+                var dv = db.DichVus.FirstOrDefault(d => d.MaDV == ct.MaDV);
+                if (dv != null)
+                    tong += dv.DonGia * ct.SoLuong;
             }
             return tong;
         }
@@ -67,24 +71,40 @@ namespace QLKS.BUS
         public decimal TinhTongTien(string maPhieu)
         {
             int soNgay = TinhSoNgayThue(maPhieu);
-            var (_, donGiaPhong) = LayThongTinPhong(maPhieu);
-            decimal tienPhong = donGiaPhong * soNgay;
+            var (_, donGia) = LayThongTinPhong(maPhieu);
+
+            decimal tienPhong = donGia * soNgay;
             decimal tienDV = TinhTienDichVu(maPhieu);
+
             return tienPhong + tienDV;
         }
 
-        // Checkout: cập nhật trạng thái phòng
-        public void ThucHienCheckout(string maPhieu)
+        // CHECKOUT
+        public bool ThucHienCheckout(string maPhieu)
         {
             var pt = LayPhieuThueTheoMa(maPhieu);
-            if (pt != null)
-            {
-                var phong = db.Phongs.FirstOrDefault(p => p.MaPhong == pt.MaPhong);
-                if (phong != null)
-                    phong.TrangThai = "TRONG";
+            if (pt == null) return false;
 
-                db.SaveChanges();
-            }
+            // cập nhật ngày đi
+            pt.NgayDi = DateTime.Now;
+
+            // tạo hóa đơn
+            HoaDon hd = new HoaDon
+            {
+                MaHD = "HD" + DateTime.Now.Ticks.ToString().Substring(10),
+                MaPhieu = maPhieu,
+                NgayThanhToan = DateTime.Now,
+                TongTien = TinhTongTien(maPhieu)
+            };
+            db.HoaDons.Add(hd);
+
+            // cập nhật trạng thái phòng
+            var phong = db.Phongs.FirstOrDefault(p => p.MaPhong == pt.MaPhong);
+            if (phong != null)
+                phong.TrangThai = "TRONG";
+
+            db.SaveChanges();
+            return true;
         }
     }
 }

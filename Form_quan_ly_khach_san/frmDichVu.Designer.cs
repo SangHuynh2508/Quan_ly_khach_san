@@ -40,12 +40,15 @@
             this.colummacheckin = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.colummadicvu = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columngay = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.btnthemchitiet = new System.Windows.Forms.Button();
+            this.txtSoLuong = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(84, 302);
+            this.label1.Location = new System.Drawing.Point(84, 310);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(97, 20);
             this.label1.TabIndex = 0;
@@ -151,11 +154,40 @@
             this.columngay.Text = "Thành Tiền";
             this.columngay.Width = 120;
             // 
+            // btnthemchitiet
+            // 
+            this.btnthemchitiet.Location = new System.Drawing.Point(622, 654);
+            this.btnthemchitiet.Name = "btnthemchitiet";
+            this.btnthemchitiet.Size = new System.Drawing.Size(151, 34);
+            this.btnthemchitiet.TabIndex = 11;
+            this.btnthemchitiet.Text = "thêm cho khách ";
+            this.btnthemchitiet.UseVisualStyleBackColor = true;
+            this.btnthemchitiet.Click += new System.EventHandler(this.btnthemchitiet_Click);
+            // 
+            // txtSoLuong
+            // 
+            this.txtSoLuong.Location = new System.Drawing.Point(768, 198);
+            this.txtSoLuong.Name = "txtSoLuong";
+            this.txtSoLuong.Size = new System.Drawing.Size(100, 26);
+            this.txtSoLuong.TabIndex = 12;
+            this.txtSoLuong.Text = "1";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(665, 204);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(69, 20);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "số lượng";
+            // 
             // frmDichVu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(900, 700);
+            this.Controls.Add(this.txtSoLuong);
+            this.Controls.Add(this.btnthemchitiet);
             this.Controls.Add(this.listView1);
             this.Controls.Add(this.txtGiaTien);
             this.Controls.Add(this.cmbTenDichVu);
@@ -164,6 +196,7 @@
             this.Controls.Add(this.btnThem);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frmDichVu";
@@ -187,5 +220,8 @@
         private System.Windows.Forms.ColumnHeader colummacheckin;
         private System.Windows.Forms.ColumnHeader colummadicvu;
         private System.Windows.Forms.ColumnHeader columngay;
+        private System.Windows.Forms.Button btnthemchitiet;
+        private System.Windows.Forms.TextBox txtSoLuong;
+        private System.Windows.Forms.Label label2;
     }
 }
