@@ -142,9 +142,6 @@ namespace Form_quan_ly_khach_san
             this.Close();
         }
 
-        private void btnThoat_Click(object sender, EventArgs e)
-        {
-
-        }
+       
     }
 }

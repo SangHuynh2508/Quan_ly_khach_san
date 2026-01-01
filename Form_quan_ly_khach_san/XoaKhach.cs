@@ -99,9 +99,6 @@ namespace Form_quan_ly_khach_san
             dgvXoaKhach.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
         }
 
-        private void btnXoa_Click(object sender, EventArgs e)
-        {
-
-        }
+       
     }
 }
