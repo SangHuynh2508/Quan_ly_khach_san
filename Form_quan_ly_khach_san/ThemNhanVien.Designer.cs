@@ -48,6 +48,7 @@
             this.btnXoaBo = new System.Windows.Forms.Button();
             this.btnThoat = new System.Windows.Forms.Button();
             this.dgvThemNV = new System.Windows.Forms.DataGridView();
+            this.btnNhapLai = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvThemNV)).BeginInit();
             this.SuspendLayout();
@@ -197,10 +198,10 @@
             // 
             // btnTaoMoi
             // 
-            this.btnTaoMoi.Location = new System.Drawing.Point(681, 195);
+            this.btnTaoMoi.Location = new System.Drawing.Point(681, 187);
             this.btnTaoMoi.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnTaoMoi.Name = "btnTaoMoi";
-            this.btnTaoMoi.Size = new System.Drawing.Size(84, 29);
+            this.btnTaoMoi.Size = new System.Drawing.Size(84, 35);
             this.btnTaoMoi.TabIndex = 2;
             this.btnTaoMoi.Text = "Tạo mới";
             this.btnTaoMoi.UseVisualStyleBackColor = true;
@@ -208,10 +209,10 @@
             // 
             // btnXoaBo
             // 
-            this.btnXoaBo.Location = new System.Drawing.Point(681, 261);
+            this.btnXoaBo.Location = new System.Drawing.Point(681, 255);
             this.btnXoaBo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnXoaBo.Name = "btnXoaBo";
-            this.btnXoaBo.Size = new System.Drawing.Size(84, 29);
+            this.btnXoaBo.Size = new System.Drawing.Size(84, 35);
             this.btnXoaBo.TabIndex = 3;
             this.btnXoaBo.Text = "Xóa bỏ";
             this.btnXoaBo.UseVisualStyleBackColor = true;
@@ -219,10 +220,10 @@
             // 
             // btnThoat
             // 
-            this.btnThoat.Location = new System.Drawing.Point(681, 334);
+            this.btnThoat.Location = new System.Drawing.Point(681, 393);
             this.btnThoat.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnThoat.Name = "btnThoat";
-            this.btnThoat.Size = new System.Drawing.Size(84, 29);
+            this.btnThoat.Size = new System.Drawing.Size(84, 35);
             this.btnThoat.TabIndex = 4;
             this.btnThoat.Text = "Thoát";
             this.btnThoat.UseVisualStyleBackColor = true;
@@ -239,11 +240,22 @@
             this.dgvThemNV.Size = new System.Drawing.Size(879, 188);
             this.dgvThemNV.TabIndex = 5;
             // 
+            // btnNhapLai
+            // 
+            this.btnNhapLai.Location = new System.Drawing.Point(681, 328);
+            this.btnNhapLai.Name = "btnNhapLai";
+            this.btnNhapLai.Size = new System.Drawing.Size(84, 35);
+            this.btnNhapLai.TabIndex = 6;
+            this.btnNhapLai.Text = "Nhập lại";
+            this.btnNhapLai.UseVisualStyleBackColor = true;
+            this.btnNhapLai.Click += new System.EventHandler(this.btnNhapLai_Click);
+            // 
             // ThemNhanVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(944, 792);
+            this.Controls.Add(this.btnNhapLai);
             this.Controls.Add(this.dgvThemNV);
             this.Controls.Add(this.btnThoat);
             this.Controls.Add(this.btnXoaBo);
@@ -283,5 +295,6 @@
         private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.ColumnHeader columnHeader3;
         private System.Windows.Forms.ColumnHeader columnHeader4;
+        private System.Windows.Forms.Button btnNhapLai;
     }
 }

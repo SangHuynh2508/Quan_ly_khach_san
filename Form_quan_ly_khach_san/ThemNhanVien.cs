@@ -57,13 +57,6 @@ namespace Form_quan_ly_khach_san
                 listView1.Items.Add(item);
             }
         }
-        private void ClearForm()
-        {
-            txtTenDangNhap.Clear();
-            txtHoTen.Clear();
-            txtMaNV.Text = nvBus.TaoMaNVTuDong();
-            txtSDT.Clear();
-        }
         #endregion
         #region events
         private void btnTaoMoi_Click(object sender, EventArgs e)
@@ -82,7 +75,7 @@ namespace Form_quan_ly_khach_san
                 MessageBox.Show("Thêm thành công!");
                 LoadData();
                 LoadListView();
-                btnXoaBo_Click(null, null);
+                btnNhapLai_Click(null, null);
             }
             else
             {
@@ -97,6 +90,36 @@ namespace Form_quan_ly_khach_san
 
         private void btnXoaBo_Click(object sender, EventArgs e)
         {
+            if (dgvThemNV.CurrentRow != null)
+            {
+                string maNV = dgvThemNV.CurrentRow.Cells["MaNV"].Value.ToString();
+                string tenNV = dgvThemNV.CurrentRow.Cells["HoTen"].Value.ToString();
+
+                DialogResult dr = MessageBox.Show($"Bạn có chắc chắn muốn xóa nhân viên {tenNV} ({maNV}) không?",
+                                                 "Xác nhận xóa", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+                if (dr == DialogResult.Yes)
+                {
+                    if (nvBus.XoaNhanVien(maNV))
+                    {
+                        MessageBox.Show("Xóa nhân viên thành công!");
+                        LoadData();   
+                        LoadListView(); 
+                        btnNhapLai_Click(null, null); 
+                    }
+                    else
+                    {
+                        MessageBox.Show("Không thể xóa nhân viên này.");
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("Vui lòng chọn nhân viên cần xóa trong danh sách!");
+            }
+        }
+        private void btnNhapLai_Click(object sender, EventArgs e)
+        {
             txtHoTen.Clear();
             txtTenDangNhap.Clear();
             txtSDT.Clear();
@@ -105,5 +128,7 @@ namespace Form_quan_ly_khach_san
             txtHoTen.Focus();
         }
         #endregion
+
+
     }
 }
