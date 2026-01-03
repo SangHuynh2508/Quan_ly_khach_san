@@ -68,6 +68,5 @@ namespace Form_quan_ly_khach_san
             txtTenNV.Enabled = false;
             txtTenNV.Clear();
         }
-
     }
 }
