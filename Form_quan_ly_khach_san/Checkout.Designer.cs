@@ -77,7 +77,6 @@
             this.txtTongSoTien.Name = "txtTongSoTien";
             this.txtTongSoTien.Size = new System.Drawing.Size(184, 26);
             this.txtTongSoTien.TabIndex = 11;
-            this.txtTongSoTien.TextChanged += new System.EventHandler(this.txtTongSoTien_TextChanged);
             // 
             // txtTienDichVu
             // 
@@ -86,7 +85,6 @@
             this.txtTienDichVu.Name = "txtTienDichVu";
             this.txtTienDichVu.Size = new System.Drawing.Size(184, 26);
             this.txtTienDichVu.TabIndex = 10;
-            this.txtTienDichVu.TextChanged += new System.EventHandler(this.txtTienDichVu_TextChanged);
             // 
             // txtTienPhong
             // 
@@ -95,7 +93,6 @@
             this.txtTienPhong.Name = "txtTienPhong";
             this.txtTienPhong.Size = new System.Drawing.Size(184, 26);
             this.txtTienPhong.TabIndex = 9;
-            this.txtTienPhong.TextChanged += new System.EventHandler(this.txtTienPhong_TextChanged);
             // 
             // txtPhong
             // 
@@ -104,7 +101,6 @@
             this.txtPhong.Name = "txtPhong";
             this.txtPhong.Size = new System.Drawing.Size(184, 26);
             this.txtPhong.TabIndex = 8;
-            this.txtPhong.TextChanged += new System.EventHandler(this.txtPhong_TextChanged);
             // 
             // txtMaCheckin
             // 
@@ -113,14 +109,13 @@
             this.txtMaCheckin.Name = "txtMaCheckin";
             this.txtMaCheckin.Size = new System.Drawing.Size(184, 26);
             this.txtMaCheckin.TabIndex = 7;
-            this.txtMaCheckin.TextChanged += new System.EventHandler(this.txtMaCheckin_TextChanged);
             // 
             // btnThoat
             // 
-            this.btnThoat.Location = new System.Drawing.Point(214, 478);
+            this.btnThoat.Location = new System.Drawing.Point(214, 468);
             this.btnThoat.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnThoat.Name = "btnThoat";
-            this.btnThoat.Size = new System.Drawing.Size(84, 29);
+            this.btnThoat.Size = new System.Drawing.Size(104, 39);
             this.btnThoat.TabIndex = 6;
             this.btnThoat.Text = "Thoát";
             this.btnThoat.UseVisualStyleBackColor = true;
@@ -128,10 +123,10 @@
             // 
             // btnCheckout
             // 
-            this.btnCheckout.Location = new System.Drawing.Point(27, 479);
+            this.btnCheckout.Location = new System.Drawing.Point(27, 468);
             this.btnCheckout.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnCheckout.Name = "btnCheckout";
-            this.btnCheckout.Size = new System.Drawing.Size(84, 29);
+            this.btnCheckout.Size = new System.Drawing.Size(114, 40);
             this.btnCheckout.TabIndex = 5;
             this.btnCheckout.Text = "Check-out";
             this.btnCheckout.UseVisualStyleBackColor = true;
@@ -198,7 +193,6 @@
             this.txtSoNgayThue.Name = "txtSoNgayThue";
             this.txtSoNgayThue.Size = new System.Drawing.Size(166, 26);
             this.txtSoNgayThue.TabIndex = 2;
-            this.txtSoNgayThue.TextChanged += new System.EventHandler(this.txtSoNgayThue_TextChanged);
             // 
             // comboBox1
             // 

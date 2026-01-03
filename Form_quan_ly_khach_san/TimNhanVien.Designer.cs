@@ -98,7 +98,6 @@
             this.dgvTimNhanVien.RowTemplate.Height = 24;
             this.dgvTimNhanVien.Size = new System.Drawing.Size(792, 321);
             this.dgvTimNhanVien.TabIndex = 4;
-            this.dgvTimNhanVien.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvTimNhanVien_CellContentClick);
             // 
             // label1
             // 
@@ -125,7 +124,6 @@
             this.txtTenNV.Name = "txtTenNV";
             this.txtTenNV.Size = new System.Drawing.Size(221, 26);
             this.txtTenNV.TabIndex = 7;
-            this.txtTenNV.TextChanged += new System.EventHandler(this.txtTenNV_TextChanged);
             // 
             // txtSDTNV
             // 

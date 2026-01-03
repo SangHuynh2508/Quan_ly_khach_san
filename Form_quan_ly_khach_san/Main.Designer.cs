@@ -43,6 +43,7 @@
             this.MnTimKiem = new System.Windows.Forms.ToolStripMenuItem();
             this.MnCapNhat = new System.Windows.Forms.ToolStripMenuItem();
             this.MnXoaKhach = new System.Windows.Forms.ToolStripMenuItem();
+            this.MnQLKhach = new System.Windows.Forms.ToolStripMenuItem();
             this.MnQuanLyDichVu = new System.Windows.Forms.ToolStripMenuItem();
             this.MnQuanLyNhanVien = new System.Windows.Forms.ToolStripMenuItem();
             this.MnCapNhatNV = new System.Windows.Forms.ToolStripMenuItem();
@@ -52,7 +53,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.label2 = new System.Windows.Forms.Label();
-            this.MnQLKhach = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -142,7 +142,7 @@
             // 
             this.MnCheckin.Image = ((System.Drawing.Image)(resources.GetObject("MnCheckin.Image")));
             this.MnCheckin.Name = "MnCheckin";
-            this.MnCheckin.Size = new System.Drawing.Size(270, 34);
+            this.MnCheckin.Size = new System.Drawing.Size(247, 34);
             this.MnCheckin.Text = "Check-in";
             this.MnCheckin.Click += new System.EventHandler(this.MnCheckin_Click);
             // 
@@ -150,7 +150,7 @@
             // 
             this.MnCheckout.Image = ((System.Drawing.Image)(resources.GetObject("MnCheckout.Image")));
             this.MnCheckout.Name = "MnCheckout";
-            this.MnCheckout.Size = new System.Drawing.Size(270, 34);
+            this.MnCheckout.Size = new System.Drawing.Size(247, 34);
             this.MnCheckout.Text = "Check-out";
             this.MnCheckout.Click += new System.EventHandler(this.MnCheckout_Click);
             // 
@@ -158,7 +158,7 @@
             // 
             this.MnTimKiem.Image = ((System.Drawing.Image)(resources.GetObject("MnTimKiem.Image")));
             this.MnTimKiem.Name = "MnTimKiem";
-            this.MnTimKiem.Size = new System.Drawing.Size(270, 34);
+            this.MnTimKiem.Size = new System.Drawing.Size(247, 34);
             this.MnTimKiem.Text = "Tìm kiếm";
             this.MnTimKiem.Click += new System.EventHandler(this.MnTimKiem_Click);
             // 
@@ -166,7 +166,7 @@
             // 
             this.MnCapNhat.Image = ((System.Drawing.Image)(resources.GetObject("MnCapNhat.Image")));
             this.MnCapNhat.Name = "MnCapNhat";
-            this.MnCapNhat.Size = new System.Drawing.Size(270, 34);
+            this.MnCapNhat.Size = new System.Drawing.Size(247, 34);
             this.MnCapNhat.Text = "Cập nhật";
             this.MnCapNhat.Click += new System.EventHandler(this.MnCapNhat_Click);
             // 
@@ -174,9 +174,17 @@
             // 
             this.MnXoaKhach.Image = ((System.Drawing.Image)(resources.GetObject("MnXoaKhach.Image")));
             this.MnXoaKhach.Name = "MnXoaKhach";
-            this.MnXoaKhach.Size = new System.Drawing.Size(270, 34);
+            this.MnXoaKhach.Size = new System.Drawing.Size(247, 34);
             this.MnXoaKhach.Text = "Xóa khách";
             this.MnXoaKhach.Click += new System.EventHandler(this.MnXoaKhach_Click);
+            // 
+            // MnQLKhach
+            // 
+            this.MnQLKhach.Image = ((System.Drawing.Image)(resources.GetObject("MnQLKhach.Image")));
+            this.MnQLKhach.Name = "MnQLKhach";
+            this.MnQLKhach.Size = new System.Drawing.Size(247, 34);
+            this.MnQLKhach.Text = "Danh sách khách";
+            this.MnQLKhach.Click += new System.EventHandler(this.MnQLKhach_Click);
             // 
             // MnQuanLyDichVu
             // 
@@ -231,8 +239,8 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.DimGray;
-            this.label1.Location = new System.Drawing.Point(155, 439);
+            this.label1.ForeColor = System.Drawing.Color.Silver;
+            this.label1.Location = new System.Drawing.Point(381, 459);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(733, 82);
             this.label1.TabIndex = 2;
@@ -249,25 +257,16 @@
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.DimGray;
+            this.label2.ForeColor = System.Drawing.Color.Silver;
             this.label2.Location = new System.Drawing.Point(48, 60);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(132, 46);
             this.label2.TabIndex = 3;
             this.label2.Text = "label2";
             // 
-            // MnQLKhach
-            // 
-            this.MnQLKhach.Image = ((System.Drawing.Image)(resources.GetObject("MnQLKhach.Image")));
-            this.MnQLKhach.Name = "MnQLKhach";
-            this.MnQLKhach.Size = new System.Drawing.Size(270, 34);
-            this.MnQLKhach.Text = "Danh sách khách";
-            this.MnQLKhach.Click += new System.EventHandler(this.MnQLKhach_Click);
-            // 
             // Main
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(900, 562);
             this.Controls.Add(this.label2);

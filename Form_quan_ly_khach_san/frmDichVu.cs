@@ -10,7 +10,6 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using QLKS.DAL.Models;
 
-
 namespace Form_quan_ly_khach_san
 {
     public partial class frmDichVu : Form
@@ -131,11 +130,6 @@ namespace Form_quan_ly_khach_san
                 listView1.Items.Add(item);
             }
         }
-
-
-
-
-
         private void btnThoat_Click(object sender, EventArgs e)
         {
             this.Close();

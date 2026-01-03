@@ -202,7 +202,6 @@
             this.txtTenKhachCu.Name = "txtTenKhachCu";
             this.txtTenKhachCu.Size = new System.Drawing.Size(202, 26);
             this.txtTenKhachCu.TabIndex = 14;
-            this.txtTenKhachCu.TextChanged += new System.EventHandler(this.txtTenKhachCu_TextChanged);
             // 
             // txtGioiTinhCu
             // 
@@ -211,7 +210,6 @@
             this.txtGioiTinhCu.Name = "txtGioiTinhCu";
             this.txtGioiTinhCu.Size = new System.Drawing.Size(202, 26);
             this.txtGioiTinhCu.TabIndex = 14;
-            this.txtGioiTinhCu.TextChanged += new System.EventHandler(this.txtGioiTinhCu_TextChanged);
             // 
             // txtCMNDCu
             // 
@@ -220,7 +218,6 @@
             this.txtCMNDCu.Name = "txtCMNDCu";
             this.txtCMNDCu.Size = new System.Drawing.Size(202, 26);
             this.txtCMNDCu.TabIndex = 14;
-            this.txtCMNDCu.TextChanged += new System.EventHandler(this.txtCMNDCu_TextChanged);
             // 
             // txtSDTCu
             // 
@@ -229,7 +226,6 @@
             this.txtSDTCu.Name = "txtSDTCu";
             this.txtSDTCu.Size = new System.Drawing.Size(202, 26);
             this.txtSDTCu.TabIndex = 14;
-            this.txtSDTCu.TextChanged += new System.EventHandler(this.txtSDTCu_TextChanged);
             // 
             // txtDiaChiCu
             // 
@@ -238,7 +234,6 @@
             this.txtDiaChiCu.Name = "txtDiaChiCu";
             this.txtDiaChiCu.Size = new System.Drawing.Size(202, 26);
             this.txtDiaChiCu.TabIndex = 14;
-            this.txtDiaChiCu.TextChanged += new System.EventHandler(this.txtDiaChiCu_TextChanged);
             // 
             // txtNgayDatCu
             // 
@@ -247,7 +242,6 @@
             this.txtNgayDatCu.Name = "txtNgayDatCu";
             this.txtNgayDatCu.Size = new System.Drawing.Size(202, 26);
             this.txtNgayDatCu.TabIndex = 14;
-            this.txtNgayDatCu.TextChanged += new System.EventHandler(this.txtNgayDatCu_TextChanged);
             // 
             // txtNgayDatMoi
             // 
@@ -256,7 +250,6 @@
             this.txtNgayDatMoi.Name = "txtNgayDatMoi";
             this.txtNgayDatMoi.Size = new System.Drawing.Size(202, 26);
             this.txtNgayDatMoi.TabIndex = 15;
-            this.txtNgayDatMoi.TextChanged += new System.EventHandler(this.txtNgayDatMoi_TextChanged);
             // 
             // txtDiaChiMoi
             // 
@@ -265,7 +258,6 @@
             this.txtDiaChiMoi.Name = "txtDiaChiMoi";
             this.txtDiaChiMoi.Size = new System.Drawing.Size(202, 26);
             this.txtDiaChiMoi.TabIndex = 16;
-            this.txtDiaChiMoi.TextChanged += new System.EventHandler(this.txtDiaChiMoi_TextChanged);
             // 
             // txtSDTMoi
             // 
@@ -274,7 +266,6 @@
             this.txtSDTMoi.Name = "txtSDTMoi";
             this.txtSDTMoi.Size = new System.Drawing.Size(202, 26);
             this.txtSDTMoi.TabIndex = 17;
-            this.txtSDTMoi.TextChanged += new System.EventHandler(this.txtSDTMoi_TextChanged);
             // 
             // txtCMNDMoi
             // 
@@ -283,7 +274,6 @@
             this.txtCMNDMoi.Name = "txtCMNDMoi";
             this.txtCMNDMoi.Size = new System.Drawing.Size(202, 26);
             this.txtCMNDMoi.TabIndex = 18;
-            this.txtCMNDMoi.TextChanged += new System.EventHandler(this.txtCMNDMoi_TextChanged);
             // 
             // txtGioiTinhMoi
             // 
@@ -292,7 +282,6 @@
             this.txtGioiTinhMoi.Name = "txtGioiTinhMoi";
             this.txtGioiTinhMoi.Size = new System.Drawing.Size(202, 26);
             this.txtGioiTinhMoi.TabIndex = 19;
-            this.txtGioiTinhMoi.TextChanged += new System.EventHandler(this.txtGioiTinhMoi_TextChanged);
             // 
             // txtTenKhachMoi
             // 
@@ -301,7 +290,6 @@
             this.txtTenKhachMoi.Name = "txtTenKhachMoi";
             this.txtTenKhachMoi.Size = new System.Drawing.Size(202, 26);
             this.txtTenKhachMoi.TabIndex = 20;
-            this.txtTenKhachMoi.TextChanged += new System.EventHandler(this.txtTenKhachMoi_TextChanged);
             // 
             // txtMaKhachMoi
             // 
@@ -310,7 +298,6 @@
             this.txtMaKhachMoi.Name = "txtMaKhachMoi";
             this.txtMaKhachMoi.Size = new System.Drawing.Size(202, 26);
             this.txtMaKhachMoi.TabIndex = 21;
-            this.txtMaKhachMoi.TextChanged += new System.EventHandler(this.txtMaKhachMoi_TextChanged);
             // 
             // btnSua
             // 

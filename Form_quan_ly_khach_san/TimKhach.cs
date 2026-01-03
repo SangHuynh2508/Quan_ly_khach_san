@@ -74,16 +74,6 @@ namespace Form_quan_ly_khach_san
             }
         }
 
-        private void txtTenKhach_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtSoCMND_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnThoat_Click(object sender, EventArgs e)
         {
             this.Close();

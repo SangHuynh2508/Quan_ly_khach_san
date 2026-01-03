@@ -91,7 +91,6 @@
             this.txtTenKhach.Name = "txtTenKhach";
             this.txtTenKhach.Size = new System.Drawing.Size(265, 26);
             this.txtTenKhach.TabIndex = 4;
-            this.txtTenKhach.TextChanged += new System.EventHandler(this.txtTenKhach_TextChanged);
             // 
             // txtSoCMND
             // 
@@ -100,7 +99,6 @@
             this.txtSoCMND.Name = "txtSoCMND";
             this.txtSoCMND.Size = new System.Drawing.Size(265, 26);
             this.txtSoCMND.TabIndex = 5;
-            this.txtSoCMND.TextChanged += new System.EventHandler(this.txtSoCMND_TextChanged);
             // 
             // dgvTimKhach
             // 

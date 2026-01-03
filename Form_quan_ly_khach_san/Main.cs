@@ -179,5 +179,6 @@ namespace Form_quan_ly_khach_san
             QuanLyKhach quanLyKhach = new QuanLyKhach();
             quanLyKhach.ShowDialog();
         }
+
     }
 }

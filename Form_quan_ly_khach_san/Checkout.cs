@@ -33,36 +33,6 @@ namespace Form_quan_ly_khach_san
             this.Close();
         }
 
-        private void txtSoNgayThue_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtMaCheckin_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtPhong_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtTienPhong_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtTienDichVu_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtTongSoTien_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnCheckout_Click(object sender, EventArgs e)
         {
             string maPhieu = txtMaCheckin.Text;
