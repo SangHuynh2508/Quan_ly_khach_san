@@ -46,7 +46,7 @@ namespace Form_quan_ly_khach_san
 
             string maNV = treeView1.SelectedNode.Tag.ToString().Substring(1);
             string quyenMoi = "";
-            if (listView1.Items[2].Checked) quyenMoi = "ADMIN";
+            if (listView1.Items[1].Checked) quyenMoi = "ADMIN";
             else if (listView1.Items[0].Checked) quyenMoi = "NHANVIEN";
 
             if (string.IsNullOrEmpty(quyenMoi))
