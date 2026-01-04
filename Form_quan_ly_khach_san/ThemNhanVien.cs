@@ -30,6 +30,10 @@ namespace Form_quan_ly_khach_san
             comboBox1.Items.Add("ADMIN");
             comboBox1.Items.Add("NHANVIEN");
             comboBox1.SelectedIndex = 1;
+            dgvThemNV.SelectionMode = DataGridViewSelectionMode.FullRowSelect; 
+            dgvThemNV.ReadOnly = true;                                        
+            dgvThemNV.EditMode = DataGridViewEditMode.EditProgrammatically;  
+            dgvThemNV.MultiSelect = false;
         }
         #region hàm cần thiết
         private void LoadData()
@@ -127,8 +131,25 @@ namespace Form_quan_ly_khach_san
             comboBox1.SelectedIndex = 1;
             txtHoTen.Focus();
         }
+        private void dgvThemNV_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow row = dgvThemNV.Rows[e.RowIndex];
+                txtMaNV.Text = row.Cells["MaNV"].Value?.ToString();
+                txtHoTen.Text = row.Cells["HoTen"].Value?.ToString();
+                txtTenDangNhap.Text = row.Cells["TaiKhoan"].Value?.ToString();
+                txtSDT.Text = row.Cells["SDT"].Value?.ToString();
+
+                string quyen = row.Cells["Quyen"].Value?.ToString();
+                if (!string.IsNullOrEmpty(quyen))
+                {
+                    comboBox1.SelectedItem = quyen;
+                }
+            }
+        }
         #endregion
 
-
+        
     }
 }

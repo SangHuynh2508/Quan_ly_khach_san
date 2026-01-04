@@ -239,6 +239,7 @@
             this.dgvThemNV.RowTemplate.Height = 24;
             this.dgvThemNV.Size = new System.Drawing.Size(879, 188);
             this.dgvThemNV.TabIndex = 5;
+            this.dgvThemNV.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvThemNV_CellContentClick);
             // 
             // btnNhapLai
             // 
