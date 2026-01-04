@@ -37,6 +37,14 @@ namespace QLKS.BUS
         {
             return db.NhanViens.FirstOrDefault(x => x.MaNV == maNV);
         }
+        public NhanVien TimTheoTen(string hoTen)
+        {
+            return db.NhanViens.FirstOrDefault(x => x.HoTen == hoTen);
+        }
+        public NhanVien TimTheoSDT(string sdt)
+        {
+            return db.NhanViens.FirstOrDefault(x => x.SDT == sdt);
+        }
         #region Cập nhật thông tin
         public bool CapNhatQuyen(string maNV, string quyenMoi)
         {

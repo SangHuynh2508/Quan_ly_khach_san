@@ -193,6 +193,7 @@
             this.txtMaKhachCu.Name = "txtMaKhachCu";
             this.txtMaKhachCu.Size = new System.Drawing.Size(202, 26);
             this.txtMaKhachCu.TabIndex = 14;
+            this.txtMaKhachCu.TextChanged += new System.EventHandler(this.txtMaKhachCu_TextChanged);
             // 
             // txtTenKhachCu
             // 

@@ -68,13 +68,5 @@ namespace Form_quan_ly_khach_san
             txtTenNV.Enabled = false;
             txtTenNV.Clear();
         }
-
-        private void dgvTimNhanVien_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-        }
-
-        private void txtTenNV_TextChanged(object sender, EventArgs e)
-        {
-        }
     }
 }

@@ -46,6 +46,7 @@
             this.dgvXoaKhach.RowTemplate.Height = 24;
             this.dgvXoaKhach.Size = new System.Drawing.Size(711, 360);
             this.dgvXoaKhach.TabIndex = 0;
+            this.dgvXoaKhach.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvXoaKhach_CellContentClick);
             // 
             // btnXoa
             // 
@@ -67,6 +68,7 @@
             this.btnThoat.TabIndex = 2;
             this.btnThoat.Text = "Thoát";
             this.btnThoat.UseVisualStyleBackColor = true;
+            this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
             // 
             // txtMaKhach
             // 
@@ -75,6 +77,7 @@
             this.txtMaKhach.Name = "txtMaKhach";
             this.txtMaKhach.Size = new System.Drawing.Size(112, 26);
             this.txtMaKhach.TabIndex = 3;
+            this.txtMaKhach.TextChanged += new System.EventHandler(this.txtMaKhach_TextChanged);
             // 
             // label1
             // 

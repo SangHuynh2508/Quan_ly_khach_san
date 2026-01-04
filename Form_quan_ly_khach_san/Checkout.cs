@@ -1,190 +1,90 @@
-﻿using QLKS.DAL.Models;
+﻿using QLKS.BUS;
+using QLKS.DAL.Models;
 using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
 using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Form_quan_ly_khach_san
 {
     public partial class Checkout : Form
     {
-        private QLKSContext db = new QLKSContext();
-
+        private CheckoutBUS bus = new CheckoutBUS();
         public Checkout()
         {
             InitializeComponent();
+            LoadComboMaCheckin();
         }
 
-        private void Checkout_Load(object sender, EventArgs e)
+
+        private void LoadComboMaCheckin()
         {
-            LoadActiveCheckins();
-            txtMaCheckin.ReadOnly = true;
-            txtPhong.ReadOnly = true;
-            txtTienPhong.ReadOnly = true;
-            txtTienDichVu.ReadOnly = true;
-            txtTongSoTien.ReadOnly = true;
+            comboBox1.DataSource = bus.LayTatCaPhieuThue();
+            comboBox1.DisplayMember = "MaPhieu";
+            comboBox1.ValueMember = "MaPhieu";
         }
-
-        private void LoadActiveCheckins()
-        {
-            comboBox1.Items.Clear();
-            var list = db.PhieuThues
-                .Where(p => p.NgayDi == null)
-                .Select(p => new
-                {
-                    p.MaPhieu,
-                    p.MaPhong,
-                    TenPhong = p.Phong.TenPhong,
-                    Khach = p.KhachHang.HoTen
-                })
-                .ToList();
-
-            foreach (var it in list)
-            {
-                comboBox1.Items.Add($"{it.MaPhieu} | {it.MaPhong} | {it.TenPhong} | {it.Khach}");
-            }
-
-            if (comboBox1.Items.Count > 0) comboBox1.SelectedIndex = 0;
-        }
-
-        private string ExtractMaPhieuFromCombo()
-        {
-            if (comboBox1.SelectedItem == null) return null;
-            var s = comboBox1.SelectedItem.ToString();
-            var parts = s.Split('|');
-            return parts.Length > 0 ? parts[0].Trim() : null;
-        }
-
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            UpdateSelectedRentalInfo();
-        }
-
-        private void UpdateSelectedRentalInfo()
-        {
-            string maPhieu = ExtractMaPhieuFromCombo();
-            if (string.IsNullOrEmpty(maPhieu)) return;
-
-            var pt = db.PhieuThues
-                .Where(p => p.MaPhieu == maPhieu)
-                .Select(p => new
-                {
-                    p.MaPhieu,
-                    p.MaPhong,
-                    p.NgayDen,
-                    LoaiDonGia = p.Phong.LoaiPhong.DonGia
-                })
-                .FirstOrDefault();
-
-            if (pt == null) return;
-
-            txtMaCheckin.Text = pt.MaPhieu;
-            txtPhong.Text = pt.MaPhong;
-            var days = (DateTime.Now.Date - pt.NgayDen.Date).Days;
-            if (days <= 0) days = 1;
-            txtSoNgayThue.Text = days.ToString();
-            decimal tienPhong = pt.LoaiDonGia * days;
-            txtTienPhong.Text = tienPhong.ToString("N0");
-            var tienDichVu = db.ChiTietDichVus
-                .Where(c => c.MaPhieu == pt.MaPhieu)
-                .Join(db.DichVus, c => c.MaDV, d => d.MaDV, (c, d) => new { c.SoLuong, d.DonGia })
-                .Select(x => x.SoLuong * x.DonGia)
-                .DefaultIfEmpty(0M)
-                .Sum();
-            txtTienDichVu.Text = tienDichVu.ToString("N0");
-            txtTongSoTien.Text = (tienPhong + tienDichVu).ToString("N0");
-        }
-
-        private string TaoMaHD()
-        {
-            var last = db.HoaDons.OrderByDescending(h => h.MaHD).FirstOrDefault();
-            if (last == null) return "HD001";
-            int next = int.Parse(last.MaHD.Substring(2)) + 1;
-            return "HD" + next.ToString("D3");
-        }
-
-        private void btnCheckout_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                string maPhieu = ExtractMaPhieuFromCombo();
-                if (string.IsNullOrEmpty(maPhieu))
-                {
-                    MessageBox.Show("Chọn một phiếu thuê để thanh toán.");
-                    return;
-                }
-
-                var pt = db.PhieuThues.FirstOrDefault(p => p.MaPhieu == maPhieu);
-                if (pt == null)
-                {
-                    MessageBox.Show("Phiếu thuê không tồn tại.");
-                    return;
-                }
-                var days = (DateTime.Now.Date - pt.NgayDen.Date).Days;
-                if (days <= 0) days = 1;
-                decimal tienPhong = pt.Phong.LoaiPhong.DonGia * days;
-                decimal tienDichVu = db.ChiTietDichVus
-                    .Where(c => c.MaPhieu == pt.MaPhieu)
-                    .Join(db.DichVus, c => c.MaDV, d => d.MaDV, (c, d) => c.SoLuong * d.DonGia)
-                    .DefaultIfEmpty(0M)
-                    .Sum();
-                decimal tong = tienPhong + tienDichVu;
-                var hd = new HoaDon
-                {
-                    MaHD = TaoMaHD(),
-                    MaPhieu = pt.MaPhieu,
-                    NgayThanhToan = DateTime.Now,
-                    TongTien = tong
-                };
-
-                pt.NgayDi = DateTime.Now;
-                pt.Phong.TrangThai = "TRONG";
-
-                db.HoaDons.Add(hd);
-                db.SaveChanges();
-
-                MessageBox.Show($"Check-out thành công. Hoá đơn: {hd.MaHD}\nTổng: {tong:N0}");
-                LoadActiveCheckins();
-                txtMaCheckin.Clear();
-                txtPhong.Clear();
-                txtTienPhong.Clear();
-                txtTienDichVu.Clear();
-                txtTongSoTien.Clear();
-                txtSoNgayThue.Clear();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Lỗi khi thực hiện thanh toán: " + ex.Message);
-            }
-        }
-
         private void button2_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
-        private void txtSoNgayThue_TextChanged(object sender, EventArgs e)
+        private void btnCheckout_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(txtMaCheckin.Text)) return;
-            int days;
-            if (!int.TryParse(txtSoNgayThue.Text.Trim(), out days) || days <= 0) return;
+            string maPhieu = txtMaCheckin.Text;
 
-            var maPhieu = txtMaCheckin.Text;
-            var pt = db.PhieuThues.Where(p => p.MaPhieu == maPhieu).Select(p => new
+            if (string.IsNullOrEmpty(maPhieu))
             {
-                DonGia = p.Phong.LoaiPhong.DonGia
-            }).FirstOrDefault();
-            if (pt == null) return;
+                MessageBox.Show("Chưa chọn phiếu thuê!");
+                return;
+            }
 
-            decimal tienPhong = pt.DonGia * days;
-            txtTienPhong.Text = tienPhong.ToString("N0");
-            decimal dv = 0;
-            decimal.TryParse(txtTienDichVu.Text, System.Globalization.NumberStyles.AllowThousands, null, out dv);
-            txtTongSoTien.Text = (tienPhong + dv).ToString("N0");
+            if (bus.ThucHienCheckout(maPhieu))
+            {
+                MessageBox.Show("Checkout thành công!");
+                LoadComboMaCheckin();
+                ClearForm();
+            }
+            else
+            {
+                MessageBox.Show("Checkout thất bại!");
+            }
         }
 
-        private void btnCheckout_Click_1(object sender, EventArgs e)
+        private void ClearForm()
         {
+            txtMaCheckin.Clear();
+            txtSoNgayThue.Clear();
+            txtPhong.Clear();
+            txtTienPhong.Clear();
+            txtTienDichVu.Clear();
+            txtTongSoTien.Clear();
+        }
 
+          
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (comboBox1.SelectedItem == null) return;
+
+            PhieuThue phieu = comboBox1.SelectedItem as PhieuThue;
+            if (phieu == null) return;
+
+            string maPhieu = phieu.MaPhieu;
+            txtMaCheckin.Text = maPhieu;
+
+            int soNgay = bus.TinhSoNgayThue(maPhieu);
+            txtSoNgayThue.Text = soNgay.ToString();
+
+            var (tenPhong, donGia) = bus.LayThongTinPhong(maPhieu);
+            txtPhong.Text = tenPhong;
+            txtTienPhong.Text = (donGia * soNgay).ToString("N0");
+
+            txtTienDichVu.Text = bus.TinhTienDichVu(maPhieu).ToString("N0");
+            txtTongSoTien.Text = bus.TinhTongTien(maPhieu).ToString("N0");
         }
     }
 }

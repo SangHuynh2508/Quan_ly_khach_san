@@ -73,7 +73,6 @@ namespace Form_quan_ly_khach_san
             if (tag != "Ro")
             {
                 string maNV = tag.Substring(1);
-                // Gọi BUS tìm nhân viên
                 var nv = nvBus.TimTheoMa(maNV);
 
                 if (nv != null)

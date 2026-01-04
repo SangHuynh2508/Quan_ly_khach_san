@@ -112,10 +112,10 @@
             // 
             // btnThoat
             // 
-            this.btnThoat.Location = new System.Drawing.Point(214, 478);
+            this.btnThoat.Location = new System.Drawing.Point(214, 468);
             this.btnThoat.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnThoat.Name = "btnThoat";
-            this.btnThoat.Size = new System.Drawing.Size(111, 29);
+            this.btnThoat.Size = new System.Drawing.Size(104, 39);
             this.btnThoat.TabIndex = 6;
             this.btnThoat.Text = "Thoát";
             this.btnThoat.UseVisualStyleBackColor = true;
@@ -123,14 +123,14 @@
             // 
             // btnCheckout
             // 
-            this.btnCheckout.Location = new System.Drawing.Point(27, 479);
+            this.btnCheckout.Location = new System.Drawing.Point(27, 468);
             this.btnCheckout.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnCheckout.Name = "btnCheckout";
-            this.btnCheckout.Size = new System.Drawing.Size(101, 29);
+            this.btnCheckout.Size = new System.Drawing.Size(114, 40);
             this.btnCheckout.TabIndex = 5;
             this.btnCheckout.Text = "Check-out";
             this.btnCheckout.UseVisualStyleBackColor = true;
-            this.btnCheckout.Click += new System.EventHandler(this.btnCheckout_Click_1);
+            this.btnCheckout.Click += new System.EventHandler(this.btnCheckout_Click);
             // 
             // label5
             // 
@@ -193,7 +193,6 @@
             this.txtSoNgayThue.Name = "txtSoNgayThue";
             this.txtSoNgayThue.Size = new System.Drawing.Size(166, 26);
             this.txtSoNgayThue.TabIndex = 2;
-            this.txtSoNgayThue.TextChanged += new System.EventHandler(this.txtSoNgayThue_TextChanged);
             // 
             // comboBox1
             // 
@@ -203,6 +202,7 @@
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(370, 28);
             this.comboBox1.TabIndex = 3;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // Checkout
             // 

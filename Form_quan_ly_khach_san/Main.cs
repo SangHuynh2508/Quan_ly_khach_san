@@ -142,7 +142,7 @@ namespace Form_quan_ly_khach_san
 
         private void MnQuanLyDichVu_Click(object sender, EventArgs e)
         {
-            DichVu dichVu = new DichVu();
+            frmDichVu dichVu = new frmDichVu();
             dichVu.ShowDialog();
         }
 
@@ -179,5 +179,6 @@ namespace Form_quan_ly_khach_san
             QuanLyKhach quanLyKhach = new QuanLyKhach();
             quanLyKhach.ShowDialog();
         }
+
     }
 }
