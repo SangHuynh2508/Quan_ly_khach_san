@@ -91,6 +91,12 @@ namespace Form_quan_ly_khach_san
         private void XoaKhach_Load(object sender, EventArgs e)
         {
             LoadDanhSachKhach();
+            dgvXoaKhach.AllowUserToResizeColumns = false;
+            dgvXoaKhach.AllowUserToResizeRows = false;
+            dgvXoaKhach.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dgvXoaKhach.ReadOnly = true;
+            dgvXoaKhach.EditMode = DataGridViewEditMode.EditProgrammatically;
+            dgvXoaKhach.MultiSelect = false;
         }
 
         private void LoadDanhSachKhach()
@@ -98,7 +104,5 @@ namespace Form_quan_ly_khach_san
             dgvXoaKhach.DataSource = khachHangBUS.LayTatCaKhachHang();
             dgvXoaKhach.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
         }
-
-       
     }
 }

@@ -18,7 +18,11 @@ namespace Form_quan_ly_khach_san
 
         private void TimNhanVien_Load(object sender, EventArgs e)
         {
+            dgvTimNhanVien.AllowUserToResizeColumns = false;
+            dgvTimNhanVien.AllowUserToResizeRows = false;
             dgvTimNhanVien.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dgvTimNhanVien.ReadOnly = true;
+            dgvTimNhanVien.EditMode = DataGridViewEditMode.EditProgrammatically;
             dgvTimNhanVien.MultiSelect = false;
             dgvTimNhanVien.AutoGenerateColumns = true;
             rdbTimTheoTenNV.Checked = true;

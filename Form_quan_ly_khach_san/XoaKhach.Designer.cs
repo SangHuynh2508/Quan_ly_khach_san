@@ -101,6 +101,7 @@
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "XoaKhach";
             this.Text = "XoaKhach";
+            this.Load += new System.EventHandler(this.XoaKhach_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvXoaKhach)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

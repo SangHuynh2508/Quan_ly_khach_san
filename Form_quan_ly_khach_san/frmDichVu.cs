@@ -1,4 +1,5 @@
 ﻿using QLKS.BUS;
+using QLKS.DAL.Models;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -8,7 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using QLKS.DAL.Models;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Form_quan_ly_khach_san
 {
@@ -19,8 +20,6 @@ namespace Form_quan_ly_khach_san
         public frmDichVu()
         {
             InitializeComponent();
-            LoadDichVu();
-            LoadMaCheckin();
         }
 
         private void btnThem_Click(object sender, EventArgs e)
@@ -33,7 +32,7 @@ namespace Form_quan_ly_khach_san
 
             DichVu dv = new DichVu()
             {
-                MaDV = "DV" + DateTime.Now.Ticks.ToString().Substring(10), // tự tạo mã
+                MaDV = "DV" + DateTime.Now.Ticks.ToString().Substring(10),
                 TenDV = cmbTenDichVu.Text,
                 DonGia = decimal.Parse(txtGiaTien.Text)
             };
@@ -69,7 +68,7 @@ namespace Form_quan_ly_khach_san
 
         private void LoadMaCheckin()
         {
-            var dsPhieu = checkinBUS.LayTatCaPhieuThue(); // Cần thêm method trong CheckinBUS
+            var dsPhieu = checkinBUS.LayTatCaPhieuThue();
             cmbMaCheckin.DataSource = dsPhieu;
             cmbMaCheckin.DisplayMember = "MaPhieu";
             cmbMaCheckin.ValueMember = "MaPhieu";
@@ -166,6 +165,16 @@ namespace Form_quan_ly_khach_san
             {
                 MessageBox.Show("Thêm dịch vụ thất bại!");
             }
+        }
+
+        private void frmDichVu_Load(object sender, EventArgs e)
+        {
+            LoadDichVu();
+            LoadMaCheckin();
+            listView1.FullRowSelect = true;
+            listView1.View = View.Details;
+            cmbMaCheckin.DropDownStyle = ComboBoxStyle.DropDownList;
+            cmbTenDichVu.DropDownStyle = ComboBoxStyle.DropDownList;
         }
     }
 }

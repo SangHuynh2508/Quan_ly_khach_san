@@ -18,7 +18,6 @@ namespace Form_quan_ly_khach_san
         public Checkout()
         {
             InitializeComponent();
-            LoadComboMaCheckin();
         }
 
 
@@ -85,6 +84,12 @@ namespace Form_quan_ly_khach_san
 
             txtTienDichVu.Text = bus.TinhTienDichVu(maPhieu).ToString("N0");
             txtTongSoTien.Text = bus.TinhTongTien(maPhieu).ToString("N0");
+        }
+
+        private void Checkout_Load(object sender, EventArgs e)
+        {
+            LoadComboMaCheckin();
+            comboBox1.DropDownStyle = ComboBoxStyle.DropDownList;
         }
     }
 }

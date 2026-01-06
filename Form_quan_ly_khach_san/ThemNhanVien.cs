@@ -27,9 +27,12 @@ namespace Form_quan_ly_khach_san
             txtMaNV.ReadOnly = true;
             LoadListView();
             comboBox1.Items.Clear();
+            comboBox1.DropDownStyle = ComboBoxStyle.DropDownList;
             comboBox1.Items.Add("ADMIN");
             comboBox1.Items.Add("NHANVIEN");
             comboBox1.SelectedIndex = 1;
+            dgvThemNV.AllowUserToResizeColumns = false;
+            dgvThemNV.AllowUserToResizeRows = false;
             dgvThemNV.SelectionMode = DataGridViewSelectionMode.FullRowSelect; 
             dgvThemNV.ReadOnly = true;                                        
             dgvThemNV.EditMode = DataGridViewEditMode.EditProgrammatically;  

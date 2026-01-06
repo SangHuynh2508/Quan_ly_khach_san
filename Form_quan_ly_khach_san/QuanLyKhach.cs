@@ -21,6 +21,11 @@ namespace Form_quan_ly_khach_san
         private void QuanLyKhach_Load(object sender, EventArgs e)
         {
             LoadData();
+            dgvQuanLyKhach.AllowUserToResizeColumns = false;
+            dgvQuanLyKhach.AllowUserToResizeRows = false;
+            dgvQuanLyKhach.ReadOnly = true;
+            dgvQuanLyKhach.EditMode = DataGridViewEditMode.EditProgrammatically;
+            dgvQuanLyKhach.MultiSelect = false;
         }
         private void LoadData()
         {
@@ -53,6 +58,10 @@ namespace Form_quan_ly_khach_san
             timKhach.ShowDialog();
         }
 
-        
+        private void btnXoaThongTin_Click(object sender, EventArgs e)
+        {
+            XoaKhach xoaKhach = new XoaKhach();
+            xoaKhach.ShowDialog();
+        }
     }
 }

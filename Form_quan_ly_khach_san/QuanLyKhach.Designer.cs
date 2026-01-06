@@ -78,6 +78,7 @@
             this.btnXoaThongTin.TabIndex = 3;
             this.btnXoaThongTin.Text = "Xóa thông tin";
             this.btnXoaThongTin.UseVisualStyleBackColor = true;
+            this.btnXoaThongTin.Click += new System.EventHandler(this.btnXoaThongTin_Click);
             // 
             // dgvQuanLyKhach
             // 

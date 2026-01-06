@@ -216,6 +216,7 @@
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "Checkout";
             this.Text = "Checkout";
+            this.Load += new System.EventHandler(this.Checkout_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);

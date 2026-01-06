@@ -31,6 +31,8 @@ namespace Form_quan_ly_khach_san
 
                 dgvTimKhach.DataSource =
                     khachHangBUS.TimKhachTheoTen(txtTenKhach.Text);
+                if (dgvTimKhach.Columns["PhieuThues"] != null)
+                    dgvTimKhach.Columns["PhieuThues"].Visible = false;
             }
             else if (rdbTimTheoCMND.Checked)
             {
@@ -42,6 +44,8 @@ namespace Form_quan_ly_khach_san
 
                 dgvTimKhach.DataSource =
                     khachHangBUS.TimKhachTheoCMND(txtSoCMND.Text);
+                if (dgvTimKhach.Columns["PhieuThues"] != null)
+                    dgvTimKhach.Columns["PhieuThues"].Visible = false;
             }
             else
             {
@@ -77,6 +81,17 @@ namespace Form_quan_ly_khach_san
         private void btnThoat_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void TimKhach_Load(object sender, EventArgs e)
+        {
+            dgvTimKhach.AllowUserToResizeColumns = false;
+            dgvTimKhach.AllowUserToResizeRows = false;
+            dgvTimKhach.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dgvTimKhach.ReadOnly = true;
+            dgvTimKhach.EditMode = DataGridViewEditMode.EditProgrammatically;
+            dgvTimKhach.MultiSelect = false;
+            dgvTimKhach.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
         }
     }
 }

@@ -51,6 +51,18 @@ namespace Form_quan_ly_khach_san
         {
             try
             {
+                DateTime ngayDi;
+                if (!DateTime.TryParseExact(txtNgayDi.Text, "dd/MM/yyyy", null, System.Globalization.DateTimeStyles.None, out ngayDi))
+                {
+                    MessageBox.Show("Vui lòng nhập ngày đi đúng định dạng ngày/tháng/năm (VD: 25/12/2023)!");
+                    txtNgayDi.Focus();
+                    return;
+                }
+                if (ngayDi.Date < DateTime.Now.Date)
+                {
+                    MessageBox.Show("Ngày đi dự kiến không được nhỏ hơn ngày hôm nay!");
+                    return;
+                }
                 int.TryParse(txtSoPhongDon.Text, out int soDon);
                 int.TryParse(txtSoPhongDoi.Text, out int soDoi);
 
@@ -90,6 +102,7 @@ namespace Form_quan_ly_khach_san
                         MaKH = khachHang.MaKH,
                         MaPhong = phong.MaPhong,
                         NgayDen = DateTime.Now,
+                        NgayDi = ngayDi,
                         MaNV = KtraDangNhap.strmanhanvien
                     };
                     phong.TrangThai = "DANG_THUE"; 
@@ -118,6 +131,7 @@ namespace Form_quan_ly_khach_san
             txtDiaChi.Clear();
             txtCMND.Clear();
             txtSoPhongDon.Clear();
+            txtNgayDi.Clear();
             txtMaKhach.Text = TaoMaKH();
             txtMaCheckin.Text = TaoMaPT();
             txtHoTen.Focus();
